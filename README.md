@@ -1,9 +1,6 @@
 <h1 align="center">
   <b>Hi, I'm Daniel Gomez </b><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35">
   <br>
-  <a href="https://visitcount.itsvg.in">
-    <img src="https://visitcount.itsvg.in/api?id=Daga321&label=Profile%20Views&color=3&icon=5&pretty=true" />
-  </a>
 </h1>
 <p align="center">
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Calibri&duration=3000&pause=1000&color=20C563&center=true&vCenter=true&width=500&lines=Challenge+fanatic%2C;Self-taught+FullStack+developer%2C;In+love+with+learning+new+things+every+day." alt="Typing SVG" /></a>
