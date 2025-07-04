@@ -45,13 +45,22 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I Do",
-  subTitle: "Full Stack Developer with experience in multiple technologies and a passion for learning.",
+  subTitle:
+    "Full Stack Developer with experience in multiple technologies and a passion for learning.",
   skills: [
-    emoji("⚡ Backend development with Python (Django), Java (Spring Boot), and C# (.NET Core)"),
+    emoji(
+      "⚡ Backend development with Python (Django), Java (Spring Boot), and C# (.NET Core)"
+    ),
     emoji("⚡ Game and simulation development with Unity and C#"),
-    emoji("⚡ Web development with Blazor, .NET Core, HTML, JavaScript, and CSS"),
-    emoji("⚡ Management and modeling of relational databases: SQL Server, MySQL, PostgreSQL"),
-    emoji("⚡ AI projects with Python, TensorFlow, Keras, scikit-learn, and NumPy"),
+    emoji(
+      "⚡ Web development with Blazor, .NET Core, HTML, JavaScript, and CSS"
+    ),
+    emoji(
+      "⚡ Management and modeling of relational databases: SQL Server, MySQL, PostgreSQL"
+    ),
+    emoji(
+      "⚡ AI projects with Python, TensorFlow, Keras, scikit-learn, and NumPy"
+    ),
     emoji("⚡ Version control and project management with Git and GitHub"),
     emoji("⚡ Automation and DevOps with CI/CD pipelines in GitHub Actions")
   ],
@@ -60,25 +69,28 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
-    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
-    { skillName: "Django", fontAwesomeClassname: "fab fa-python" },
-    { skillName: "Java", fontAwesomeClassname: "fab fa-java" },
-    { skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf" },
-    { skillName: "C#", fontAwesomeClassname: "fas fa-code" },
-    { skillName: ".NET Core", fontAwesomeClassname: "fab fa-microsoft" },
-    { skillName: "Unity", fontAwesomeClassname: "fas fa-cube" },
-    { skillName: "Blazor", fontAwesomeClassname: "fas fa-laptop-code" },
-    { skillName: "HTML5", fontAwesomeClassname: "fab fa-html5" },
-    { skillName: "CSS3", fontAwesomeClassname: "fab fa-css3-alt" },
-    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
-    { skillName: "SQL (Relational DBs)", fontAwesomeClassname: "fas fa-database" },
-    { skillName: "TensorFlow", fontAwesomeClassname: "fas fa-brain" },
-    { skillName: "Keras", fontAwesomeClassname: "fas fa-brain" },
-    { skillName: "scikit-learn", fontAwesomeClassname: "fas fa-brain" },
-    { skillName: "NumPy", fontAwesomeClassname: "fas fa-brain" },
-    { skillName: "Git", fontAwesomeClassname: "fab fa-git" },
-    { skillName: "GitHub", fontAwesomeClassname: "fab fa-github" },
-    { skillName: "CI/CD", fontAwesomeClassname: "fas fa-sync-alt" }
+    {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
+    {skillName: "Django", fontAwesomeClassname: "fab fa-python"},
+    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
+    {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
+    {skillName: "C#", fontAwesomeClassname: "fas fa-code"},
+    {skillName: ".NET Core", fontAwesomeClassname: "fab fa-microsoft"},
+    {skillName: "Unity", fontAwesomeClassname: "fas fa-cube"},
+    {skillName: "Blazor", fontAwesomeClassname: "fas fa-laptop-code"},
+    {skillName: "HTML5", fontAwesomeClassname: "fab fa-html5"},
+    {skillName: "CSS3", fontAwesomeClassname: "fab fa-css3-alt"},
+    {skillName: "JavaScript", fontAwesomeClassname: "fab fa-js"},
+    {
+      skillName: "SQL (Relational DBs)",
+      fontAwesomeClassname: "fas fa-database"
+    },
+    {skillName: "TensorFlow", fontAwesomeClassname: "fas fa-brain"},
+    {skillName: "Keras", fontAwesomeClassname: "fas fa-brain"},
+    {skillName: "scikit-learn", fontAwesomeClassname: "fas fa-brain"},
+    {skillName: "NumPy", fontAwesomeClassname: "fas fa-brain"},
+    {skillName: "Git", fontAwesomeClassname: "fab fa-git"},
+    {skillName: "GitHub", fontAwesomeClassname: "fab fa-github"},
+    {skillName: "CI/CD", fontAwesomeClassname: "fas fa-sync-alt"}
   ],
   display: true // Set false to hide this section, defaults to true
 };
