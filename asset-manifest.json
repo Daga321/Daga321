@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Daga321/static/css/main.0303fda3.css",
-    "main.js": "/Daga321/static/js/main.9c861154.js",
+    "main.js": "/Daga321/static/js/main.a6c37bea.js",
     "static/css/64.bba8fa55.chunk.css": "/Daga321/static/css/64.bba8fa55.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/Daga321/static/js/64.56dc6704.chunk.js",
     "static/css/769.b3cbb36b.chunk.css": "/Daga321/static/css/769.b3cbb36b.chunk.css",
@@ -23,7 +23,7 @@
     "index.html": "/Daga321/index.html",
     "static/media/talksCardBack.svg": "/Daga321/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.0303fda3.css.map": "/Daga321/static/css/main.0303fda3.css.map",
-    "main.9c861154.js.map": "/Daga321/static/js/main.9c861154.js.map",
+    "main.a6c37bea.js.map": "/Daga321/static/js/main.a6c37bea.js.map",
     "64.bba8fa55.chunk.css.map": "/Daga321/static/css/64.bba8fa55.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/Daga321/static/js/64.56dc6704.chunk.js.map",
     "769.b3cbb36b.chunk.css.map": "/Daga321/static/css/769.b3cbb36b.chunk.css.map",
@@ -31,6 +31,6 @@
   },
   "entrypoints": [
     "static/css/main.0303fda3.css",
-    "static/js/main.9c861154.js"
+    "static/js/main.a6c37bea.js"
   ]
 }
