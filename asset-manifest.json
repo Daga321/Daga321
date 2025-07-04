@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Daga321/static/css/main.505be714.css",
-    "main.js": "/Daga321/static/js/main.5f64ce94.js",
+    "main.css": "/Daga321/static/css/main.b2ec83b2.css",
+    "main.js": "/Daga321/static/js/main.04577606.js",
     "static/css/64.f1b23ec2.chunk.css": "/Daga321/static/css/64.f1b23ec2.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/Daga321/static/js/64.56dc6704.chunk.js",
     "static/css/769.5bc05660.chunk.css": "/Daga321/static/css/769.5bc05660.chunk.css",
     "static/js/769.bda0d7b7.chunk.js": "/Daga321/static/js/769.bda0d7b7.chunk.js",
-    "static/media/AWS_community_day_logo.webp": "/Daga321/static/media/AWS_community_day_logo.1d042c7fe288ef255c27.webp",
+    "static/media/AWS_community_day_logo.webp": "/Daga321/static/media/AWS_community_day_logo.beca3e7082fef4b0da58.webp",
     "static/media/Montserrat-Regular.ttf": "/Daga321/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
-    "static/media/Certificates_logo.webp": "/Daga321/static/media/Certificates_logo.15c5139aaf03090c5ba5.webp",
+    "static/media/Certifications_logo.webp": "/Daga321/static/media/Certifications_logo.445683d444f30943daba.webp",
     "static/media/Agustina.woff": "/Daga321/static/media/Agustina.eb0c59dda4cc308cba96.woff",
     "static/media/Datanalisis_logo.webp": "/Daga321/static/media/Datanalisis_logo.3f5c96339ebf1ee563dc.webp",
     "static/media/UPTC_logo.webp": "/Daga321/static/media/UPTC_logo.3d457aef7b461dcf2fec.webp",
@@ -21,15 +21,15 @@
     "static/media/saayaHealthLogo.webp": "/Daga321/static/media/saayaHealthLogo.60b27d1f184fadfce43a.webp",
     "index.html": "/Daga321/index.html",
     "static/media/talksCardBack.svg": "/Daga321/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.505be714.css.map": "/Daga321/static/css/main.505be714.css.map",
-    "main.5f64ce94.js.map": "/Daga321/static/js/main.5f64ce94.js.map",
+    "main.b2ec83b2.css.map": "/Daga321/static/css/main.b2ec83b2.css.map",
+    "main.04577606.js.map": "/Daga321/static/js/main.04577606.js.map",
     "64.f1b23ec2.chunk.css.map": "/Daga321/static/css/64.f1b23ec2.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/Daga321/static/js/64.56dc6704.chunk.js.map",
     "769.5bc05660.chunk.css.map": "/Daga321/static/css/769.5bc05660.chunk.css.map",
     "769.bda0d7b7.chunk.js.map": "/Daga321/static/js/769.bda0d7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.505be714.css",
-    "static/js/main.5f64ce94.js"
+    "static/css/main.b2ec83b2.css",
+    "static/js/main.04577606.js"
   ]
 }
