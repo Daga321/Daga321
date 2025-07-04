@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Daga321/static/css/main.0303fda3.css",
-    "main.js": "/Daga321/static/js/main.43ee517f.js",
-    "static/css/64.bba8fa55.chunk.css": "/Daga321/static/css/64.bba8fa55.chunk.css",
+    "main.css": "/Daga321/static/css/main.505be714.css",
+    "main.js": "/Daga321/static/js/main.5bc2de59.js",
+    "static/css/64.f1b23ec2.chunk.css": "/Daga321/static/css/64.f1b23ec2.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/Daga321/static/js/64.56dc6704.chunk.js",
-    "static/css/769.b3cbb36b.chunk.css": "/Daga321/static/css/769.b3cbb36b.chunk.css",
+    "static/css/769.5bc05660.chunk.css": "/Daga321/static/css/769.5bc05660.chunk.css",
     "static/js/769.bda0d7b7.chunk.js": "/Daga321/static/js/769.bda0d7b7.chunk.js",
     "static/media/Montserrat-Regular.ttf": "/Daga321/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Agustina.woff": "/Daga321/static/media/Agustina.eb0c59dda4cc308cba96.woff",
@@ -22,15 +22,15 @@
     "static/media/saayaHealthLogo.webp": "/Daga321/static/media/saayaHealthLogo.60b27d1f184fadfce43a.webp",
     "index.html": "/Daga321/index.html",
     "static/media/talksCardBack.svg": "/Daga321/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.0303fda3.css.map": "/Daga321/static/css/main.0303fda3.css.map",
-    "main.43ee517f.js.map": "/Daga321/static/js/main.43ee517f.js.map",
-    "64.bba8fa55.chunk.css.map": "/Daga321/static/css/64.bba8fa55.chunk.css.map",
+    "main.505be714.css.map": "/Daga321/static/css/main.505be714.css.map",
+    "main.5bc2de59.js.map": "/Daga321/static/js/main.5bc2de59.js.map",
+    "64.f1b23ec2.chunk.css.map": "/Daga321/static/css/64.f1b23ec2.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/Daga321/static/js/64.56dc6704.chunk.js.map",
-    "769.b3cbb36b.chunk.css.map": "/Daga321/static/css/769.b3cbb36b.chunk.css.map",
+    "769.5bc05660.chunk.css.map": "/Daga321/static/css/769.5bc05660.chunk.css.map",
     "769.bda0d7b7.chunk.js.map": "/Daga321/static/js/769.bda0d7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0303fda3.css",
-    "static/js/main.43ee517f.js"
+    "static/css/main.505be714.css",
+    "static/js/main.5bc2de59.js"
   ]
 }
