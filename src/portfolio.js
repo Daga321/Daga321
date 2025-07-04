@@ -36,6 +36,7 @@ const socialMediaLinks = {
   linkedin: "https://linkedin.com/in/daga3211",
   gmail: "daga70414@gmail.com",
   linktree: "https://linktr.ee/Daga321",
+  whatsapp: "https://api.whatsapp.com/send?phone=573007798350",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -185,7 +186,7 @@ const workExperiences = {
 To know how to get github key look at readme.md */
 
 const openSource = {
-  showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
+  showGithubProfile: true, // Set true or false to show Contact profile using Github, defaults to true
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -232,7 +233,7 @@ const achievementSection = {
       title: "Professional Certifications",
       subtitle:
         "A collection of certifications demonstrating my skills in software development, cloud computing, and related technologies.",
-      image: require("./assets/images/Certificates_logo.webp"),
+      image: require("./assets/images/Certifications_logo.webp"),
       imageAlt: "Certifications Logo",
       footerLink: [
         {
@@ -325,7 +326,7 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,

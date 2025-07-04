@@ -127,6 +127,7 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null}
+
       {socialMediaLinks.linktree ? (
         <a
           href={socialMediaLinks.linktree}
@@ -136,6 +137,18 @@ export default function socialMedia() {
         >
           {/* Using Font Awesome 'link' icon as a generic for Linktree */}
           <i className="fas fa-link"></i>
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.whatsapp ? (
+        <a
+          href={socialMediaLinks.whatsapp}
+          className="icon-button whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-whatsapp"></i>
           <span></span>
         </a>
       ) : null}
