@@ -69,26 +69,35 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
-    { skillName: "Python", fontAwesomeClassname: "devicon-python-plain" },
-    { skillName: "Django", fontAwesomeClassname: "devicon-django-plain" },
-    { skillName: "Java", fontAwesomeClassname: "devicon-java-plain" },
-    { skillName: "Spring Boot", fontAwesomeClassname: "devicon-spring-plain" },
-    { skillName: "C#", fontAwesomeClassname: "devicon-csharp-plain" },
-    { skillName: ".NET Core", fontAwesomeClassname: "devicon-dotnetcore-plain" },
-    { skillName: "Unity", fontAwesomeClassname: "devicon-unity-plain" },
-    { skillName: "Blazor", fontAwesomeClassname: "devicon-blazor-original" },
-    { skillName: "HTML5", fontAwesomeClassname: "devicon-html5-plain" },
-    { skillName: "CSS3", fontAwesomeClassname: "devicon-css3-plain" },
-    { skillName: "JavaScript", fontAwesomeClassname: "devicon-javascript-plain" },
-    { skillName: "SQL (Relational DBs)", fontAwesomeClassname: "devicon-azuresqldatabase-plain" },
-    { skillName: "TensorFlow", fontAwesomeClassname: "devicon-tensorflow-original" },
-    { skillName: "Keras", fontAwesomeClassname: "devicon-keras-plain" },
-    { skillName: "scikit-learn", fontAwesomeClassname: "devicon-scikitlearn-plain" },
-    { skillName: "NumPy", fontAwesomeClassname: "devicon-numpy-plain" },
-    { skillName: "Git", fontAwesomeClassname: "devicon-git-plain" },
-    { skillName: "GitHub", fontAwesomeClassname: "devicon-github-original" },
-    { skillName: "Docker", fontAwesomeClassname: "devicon-docker-plain" },
-    { skillName: "CI/CD", fontAwesomeClassname: "devicon-gitlab-plain" }
+    {skillName: "Python", fontAwesomeClassname: "devicon-python-plain"},
+    {skillName: "Django", fontAwesomeClassname: "devicon-django-plain"},
+    {skillName: "Java", fontAwesomeClassname: "devicon-java-plain"},
+    {skillName: "Spring Boot", fontAwesomeClassname: "devicon-spring-plain"},
+    {skillName: "C#", fontAwesomeClassname: "devicon-csharp-plain"},
+    {skillName: ".NET Core", fontAwesomeClassname: "devicon-dotnetcore-plain"},
+    {skillName: "Unity", fontAwesomeClassname: "devicon-unity-plain"},
+    {skillName: "Blazor", fontAwesomeClassname: "devicon-blazor-original"},
+    {skillName: "HTML5", fontAwesomeClassname: "devicon-html5-plain"},
+    {skillName: "CSS3", fontAwesomeClassname: "devicon-css3-plain"},
+    {skillName: "JavaScript", fontAwesomeClassname: "devicon-javascript-plain"},
+    {
+      skillName: "SQL (Relational DBs)",
+      fontAwesomeClassname: "devicon-azuresqldatabase-plain"
+    },
+    {
+      skillName: "TensorFlow",
+      fontAwesomeClassname: "devicon-tensorflow-original"
+    },
+    {skillName: "Keras", fontAwesomeClassname: "devicon-keras-plain"},
+    {
+      skillName: "scikit-learn",
+      fontAwesomeClassname: "devicon-scikitlearn-plain"
+    },
+    {skillName: "NumPy", fontAwesomeClassname: "devicon-numpy-plain"},
+    {skillName: "Git", fontAwesomeClassname: "devicon-git-plain"},
+    {skillName: "GitHub", fontAwesomeClassname: "devicon-github-original"},
+    {skillName: "Docker", fontAwesomeClassname: "devicon-docker-plain"},
+    {skillName: "CI/CD", fontAwesomeClassname: "devicon-gitlab-plain"}
   ],
   display: true // Set false to hide this section, defaults to true
 };

@@ -1,8 +1,6 @@
-
-
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./SoftwareSkill.scss";
-import { skillsSection } from "../../portfolio";
+import {skillsSection} from "../../portfolio";
 
 export default function SoftwareSkill() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -12,7 +10,10 @@ export default function SoftwareSkill() {
         <ul className="dev-icons">
           {skillsSection.softwareSkills.map((skills, i) => {
             // Remove 'colored' class if present in the classname
-            const baseClass = skills.fontAwesomeClassname.replace(' colored', '');
+            const baseClass = skills.fontAwesomeClassname.replace(
+              " colored",
+              ""
+            );
             return (
               <li
                 key={i}
@@ -21,7 +22,9 @@ export default function SoftwareSkill() {
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <i className={baseClass + (hoveredIndex === i ? ' colored' : '')}>
+                <i
+                  className={baseClass + (hoveredIndex === i ? " colored" : "")}
+                >
                   <p>{skills.skillName}</p>
                 </i>
               </li>

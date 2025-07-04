@@ -74,17 +74,39 @@
 
 /* Hover Transition */
 // Individual background-color lighten for each icon
-.twitter i:hover { background-color: lighten($twitter, 15%); }
-.google i:hover { background-color: lighten($google, 15%); }
-.gitlab i:hover { background-color: lighten($gitlab, 15%); }
-.github i:hover { background-color: lighten($github, 15%); }
-.linkedin i:hover { background-color: lighten($linkedin, 15%); }
-.facebook i:hover { background-color: lighten($faceBook, 15%); }
-.instagram i:hover { background-color: lighten($instagram, 15%); }
-.stack-overflow i:hover { background-color: lighten($stackoverflow, 15%); }
-.kaggle i:hover { background-color: lighten($kaggle, 15%); }
-.medium i:hover { background-color: lighten($medium, 15%); }
-.linktree i:hover { background-color: lighten($linktree, 15%); }
+.twitter i:hover {
+  background-color: lighten($twitter, 15%);
+}
+.google i:hover {
+  background-color: lighten($google, 15%);
+}
+.gitlab i:hover {
+  background-color: lighten($gitlab, 15%);
+}
+.github i:hover {
+  background-color: lighten($github, 15%);
+}
+.linkedin i:hover {
+  background-color: lighten($linkedin, 15%);
+}
+.facebook i:hover {
+  background-color: lighten($faceBook, 15%);
+}
+.instagram i:hover {
+  background-color: lighten($instagram, 15%);
+}
+.stack-overflow i:hover {
+  background-color: lighten($stackoverflow, 15%);
+}
+.kaggle i:hover {
+  background-color: lighten($kaggle, 15%);
+}
+.medium i:hover {
+  background-color: lighten($medium, 15%);
+}
+.linktree i:hover {
+  background-color: lighten($linktree, 15%);
+}
 
 // Shared hover effects
 .twitter i:hover,
