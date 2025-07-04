@@ -127,6 +127,18 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null}
+      {socialMediaLinks.linktree ? (
+        <a
+          href={socialMediaLinks.linktree}
+          className="icon-button linktree"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {/* Using Font Awesome 'link' icon as a generic for Linktree */}
+          <i className="fas fa-link"></i>
+          <span></span>
+        </a>
+      ) : null}
     </div>
   );
 }
