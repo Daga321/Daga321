@@ -34,6 +34,9 @@ jobs:
           npm install
           npm run build
 
+      - name: Crear archivo CNAME
+        run: echo "daga321.is-a.dev" > build/CNAME
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
