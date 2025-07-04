@@ -69,28 +69,26 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
   softwareSkills: [
-    {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
-    {skillName: "Django", fontAwesomeClassname: "fab fa-python"},
-    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
-    {skillName: "Spring Boot", fontAwesomeClassname: "fas fa-leaf"},
-    {skillName: "C#", fontAwesomeClassname: "fas fa-code"},
-    {skillName: ".NET Core", fontAwesomeClassname: "fab fa-microsoft"},
-    {skillName: "Unity", fontAwesomeClassname: "fas fa-cube"},
-    {skillName: "Blazor", fontAwesomeClassname: "fas fa-laptop-code"},
-    {skillName: "HTML5", fontAwesomeClassname: "fab fa-html5"},
-    {skillName: "CSS3", fontAwesomeClassname: "fab fa-css3-alt"},
-    {skillName: "JavaScript", fontAwesomeClassname: "fab fa-js"},
-    {
-      skillName: "SQL (Relational DBs)",
-      fontAwesomeClassname: "fas fa-database"
-    },
-    {skillName: "TensorFlow", fontAwesomeClassname: "fas fa-brain"},
-    {skillName: "Keras", fontAwesomeClassname: "fas fa-brain"},
-    {skillName: "scikit-learn", fontAwesomeClassname: "fas fa-brain"},
-    {skillName: "NumPy", fontAwesomeClassname: "fas fa-brain"},
-    {skillName: "Git", fontAwesomeClassname: "fab fa-git"},
-    {skillName: "GitHub", fontAwesomeClassname: "fab fa-github"},
-    {skillName: "CI/CD", fontAwesomeClassname: "fas fa-sync-alt"}
+    { skillName: "Python", fontAwesomeClassname: "devicon-python-plain" },
+    { skillName: "Django", fontAwesomeClassname: "devicon-django-plain" },
+    { skillName: "Java", fontAwesomeClassname: "devicon-java-plain" },
+    { skillName: "Spring Boot", fontAwesomeClassname: "devicon-spring-plain" },
+    { skillName: "C#", fontAwesomeClassname: "devicon-csharp-plain" },
+    { skillName: ".NET Core", fontAwesomeClassname: "devicon-dotnetcore-plain" },
+    { skillName: "Unity", fontAwesomeClassname: "devicon-unity-plain" },
+    { skillName: "Blazor", fontAwesomeClassname: "devicon-blazor-original" },
+    { skillName: "HTML5", fontAwesomeClassname: "devicon-html5-plain" },
+    { skillName: "CSS3", fontAwesomeClassname: "devicon-css3-plain" },
+    { skillName: "JavaScript", fontAwesomeClassname: "devicon-javascript-plain" },
+    { skillName: "SQL (Relational DBs)", fontAwesomeClassname: "devicon-azuresqldatabase-plain" },
+    { skillName: "TensorFlow", fontAwesomeClassname: "devicon-tensorflow-original" },
+    { skillName: "Keras", fontAwesomeClassname: "devicon-keras-plain" },
+    { skillName: "scikit-learn", fontAwesomeClassname: "devicon-scikitlearn-plain" },
+    { skillName: "NumPy", fontAwesomeClassname: "devicon-numpy-plain" },
+    { skillName: "Git", fontAwesomeClassname: "devicon-git-plain" },
+    { skillName: "GitHub", fontAwesomeClassname: "devicon-github-original" },
+    { skillName: "Docker", fontAwesomeClassname: "devicon-docker-plain" },
+    { skillName: "CI/CD", fontAwesomeClassname: "devicon-gitlab-plain" }
   ],
   display: true // Set false to hide this section, defaults to true
 };

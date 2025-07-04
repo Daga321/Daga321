@@ -1,3 +1,4 @@
+
 @import "../../_globalColor";
 
 .dev-icons {
@@ -15,17 +16,43 @@
   margin-bottom: 20px;
 }
 
+// Zoom effect on hover for the whole skill block
+.software-skill-inline:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
 .software-skill-inline > i {
   color: $subTitle;
 }
 
-.software-skill-inline > i:hover {
-  color: $skillsColor;
-}
-.software-skill-inline > p {
+// .software-skill-inline > i:hover {
+//   color: $skillsColor;
+// }
+
+// Skill label default style
+.software-skill-inline > i {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   color: $subTitle;
-  font-size: 10px;
+  font-size: 3rem;
 }
-.software-skill-inline > i:hover ~ p {
-  color: $skillsColor;
+
+.software-skill-inline > i > p {
+  color: inherit;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
+
+// .software-skill-inline > i:hover ~ p {
+//   color: $skillsColor;
+// }
