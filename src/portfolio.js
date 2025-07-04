@@ -127,7 +127,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "Universidad Pedagogica y Tecnológica de Colombia",
-      logo: require("./assets/images/UPTC_logo.jpg"),
+      logo: require("./assets/images/UPTC_logo.webp"),
       subHeader: "System and Computer Engineering",
       duration: "April 2019 - Present",
       desc: "Engaged in advanced studies with a strong focus on research and innovation. Contributed to collaborative projects, gaining experience in scientific problem-solving and academic competitions.",
@@ -148,7 +148,7 @@ const workExperiences = {
     {
       role: "Jr Developer / University Intern",
       company: "Datanalisis de Colombia SAS",
-      companylogo: require("./assets/images/Datanalisis_logo.jpg"),
+      companylogo: require("./assets/images/Datanalisis_logo.webp"),
       date: "Sep 2024 – Jan 2025",
       desc: "Developed a centralized gateway module enabling secure extraction of information from microservices, using authentication via JSON Web Tokens, as part of the migration of the company's ERP system. Conducted extensive testing across multiple servers and environments to ensure a robust security system.",
       descBullets: [
@@ -161,7 +161,7 @@ const workExperiences = {
     {
       role: "Full Stack .NET Developer",
       company: "Freelancer",
-      companylogo: require("./assets/images/Freelancer_logo.jpg"),
+      companylogo: require("./assets/images/Freelancer_logo.webp"),
       date: "Jun 2023 – Aug 2024",
       desc: "Developed an information system serving as a repository for materials resulting from training sessions provided to the mining sector, under the agreement between UPTC and ANM in Colombia. Contributed significantly to both frontend (Blazor) and backend (REST API with .NET), handled deployments using DevOps practices, and provided ongoing system support.",
       descBullets: [
