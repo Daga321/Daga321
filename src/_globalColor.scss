@@ -3,9 +3,12 @@ Certain colors are used for different and multiply types of elements.
 For greater control over colors visit each components .scss file. */
 
 // button colors
-$buttonColor: #55198b;
-$buttonHover: #8c43ce;
-$topButtonHover: #000;
+//$buttonColor: #55198b; // original purple main
+//$buttonHover: #8c43ce; // original purple hover
+//$topButtonHover: #000; // original top button hover
+$buttonColor: #176538; // emerald green main
+$buttonHover: #00be4f; // emerald green dark for hover
+$topButtonHover: #00be4f; // darker green for top button hover
 
 // text colors light theme
 $titleColor: #000000;
@@ -28,7 +31,8 @@ $githubRepoCardColor: rgb(88, 96, 105);
 $githubRepoCardRepoCardStatsColor: rgb(106, 115, 125);
 $githubRepoCardRepoNameColor: rgb(36, 41, 46);
 $githubProfileCardLocationTS: #ffebcd;
-$githubProfileCardBorder: #6c63ff;
+//$githubProfileCardBorder: #6c63ff; // original purple border
+$githubProfileCardBorder: #2ecc71; // emerald green border
 
 // light background colors
 $lightBackground1: #fff;
@@ -60,7 +64,8 @@ $experienceCardBannerLG: linear-gradient(
 // borders
 $progressBarBackground: rgb(243, 239, 239);
 $lightBorder1: rgba(211, 211, 211, 0.397);
-$educationCardBorder: #a9a7f9;
+//$educationCardBorder: #a9a7f9; // original purple for education card border
+$educationCardBorder: #27ae60; // emerald green for education card border
 
 // hovers
 $achievementCertificateCardHoverDark: rgba(255, 255, 255, 0.2);
@@ -69,13 +74,16 @@ $headerHoverBG: #f4f4f4;
 $contactDetailHoverTS: #b5b5b5;
 
 // misc backgrounds
-$progressBarSpanBG: #aaa5ff;
+//$progressBarSpanBG: #aaa5ff; // original purple for progress bar
+$progressBarSpanBG: #a8f5c0; // pastel emerald green
 $iconBackground: #333;
 $appHeaderBG: #282c34;
 
 // misc colors
-$skillsColor: #645beb;
-$appLink: #09d3ac;
+//$skillsColor: #645beb; // original purple for skills
+//$appLink: #09d3ac; // original accent color
+$skillsColor: #27ae60; // emerald green for skills
+$appLink: #2ecc71; // emerald green for app links
 
 // social media icons
 $faceBook: #3b5998;
