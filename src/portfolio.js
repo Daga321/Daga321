@@ -184,6 +184,7 @@ const workExperiences = {
 
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
+//Projects 
 
 const openSource = {
   showGithubProfile: true, // Set true or false to show Contact profile using Github, defaults to true
@@ -191,6 +192,7 @@ const openSource = {
 };
 
 // Some big projects you have worked on
+//Startups
 
 const bigProjects = {
   title: "Big Projects",
@@ -289,6 +291,13 @@ const talkSection = {
   display: false // Set false to hide this section, defaults to true
 };
 
+// Twitter Section
+
+const twitterDetails = {
+  userName: "twitter", //Replace "twitter" with your twitter username without @
+  display: false // Set true to display this section, defaults to false
+};
+
 // Podcast Section
 
 const podcastSection = {
@@ -319,14 +328,7 @@ const contactInfo = {
   email_address: "daga70414@gmail.com"
 };
 
-// Twitter Section
-
-const twitterDetails = {
-  userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: false // Set true to display this section, defaults to false
-};
-
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
