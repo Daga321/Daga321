@@ -1,18 +1,48 @@
 @import "../../_globalColor";
 
 .skills-main-div {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
   width: 100%;
   overflow: hidden;
 }
 
-.skills-text-div {
-  margin-left: 50px;
+.skills-image-div {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.skills-main-div > * {
-  flex: 1;
-  margin-bottom: 30px;
+.skills-text-div {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.skills-description-div {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.skills-description-div p {
+  display: flex;
+  align-items: flex-start;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.skills-description-div p::before {
+  margin-right: 12px;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
 }
 
 .skills-image-div > img {
@@ -34,6 +64,21 @@
     font-size: 40px;
   }
 }
+
+/* Media Query for tablets (iPad) */
+@media (max-width: 1024px) and (min-width: 760px) {
+  .skills-image-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .skills-image-div > img {
+    max-width: 80%;
+    object-fit: contain;
+  }
+}
+
 @media (max-width: 768px) {
   .skills-heading {
     font-size: 30px;
@@ -44,11 +89,20 @@
     line-height: normal;
   }
   .skills-main-div {
+    display: flex;
     flex-direction: column;
+    gap: 20px;
+  }
+  .skills-image-div {
+    order: 3;
   }
   .skills-text-div {
-    margin-left: 0px;
-    margin: 20px;
+    order: 1;
+    margin: 0 20px;
+  }
+  .skills-description-div {
+    order: 2;
+    margin: 0 20px;
   }
   .skills-text {
     font-size: 16px;
@@ -56,9 +110,5 @@
   .skills-text-subtitle {
     font-size: 16px;
     text-align: center;
-  }
-  .skills-image-div {
-    /* display: none; */
-    order: 2;
   }
 }

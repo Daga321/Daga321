@@ -55,3 +55,8 @@
 // .software-skill-inline > i:hover ~ p {
 //   color: $skillsColor;
 // }
+
+// White color for better contrast in dark mode (Unity, GitHub)
+.white-colored {
+  color: white !important;
+}

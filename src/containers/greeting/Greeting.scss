@@ -4,7 +4,7 @@
   width: 90%;
   padding: 20px 10px;
   margin: 0px auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 .greet-main {
   width: 90%;
@@ -99,6 +99,23 @@
     font-size: 20px;
   }
 }
+
+/* Media Query for tablets (iPad) */
+@media (max-width: 1024px) and (min-width: 760px) {
+  .greeting-image-div {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .greeting-image-div > img {
+    max-width: 80%;
+    object-fit: contain;
+    padding-top: 60px;
+  }
+}
+
 @media (max-width: 768px) {
   .button-greeting-div {
     justify-content: space-around;

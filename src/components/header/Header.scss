@@ -14,10 +14,39 @@
 
 .dark-menu li a {
   color: $textColorDark !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.dark-menu li a::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: $buttonColor;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.dark-menu li a:hover::after {
+  width: calc(100% - 40px);
 }
 
 .dark-menu li a:hover {
-  background-color: $buttonColor !important;
+  background-color: transparent !important;
+  color: $textColorDark !important;
+}
+
+/* Excluir el toggle switch del efecto hover en modo oscuro */
+.dark-menu li:last-child a::after {
+  display: none;
+}
+
+.dark-menu li:last-child a:hover {
+  background-color: transparent !important;
 }
 
 .header {
@@ -43,11 +72,42 @@
   padding: 15px 20px;
   color: $textColor;
   text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
-.header li a:hover,
-.header .menu-btn:hover {
-  background-color: $headerHoverBG;
+.header li a::after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: $buttonColor;
+  border-radius: 5px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.header li a:hover::after {
+  width: calc(100% - 40px);
+}
+
+.header li a:hover {
+  color: $textColor;
+}
+
+/* Excluir el toggle switch del efecto hover pero mantener alineación */
+.header li:last-child a {
+  padding: 15px 20px;
+}
+
+.header li:last-child a::after {
+  display: none;
+}
+
+.header li:last-child a:hover {
+  background-color: transparent;
 }
 
 .header .logo {
@@ -85,7 +145,6 @@
 
 .header .menu-icon {
   cursor: pointer;
-  display: inline-block;
   float: right;
   padding: 28px 20px;
   position: relative;
