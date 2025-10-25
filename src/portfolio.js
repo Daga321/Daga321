@@ -23,7 +23,7 @@ const greeting = {
   username: "Daga",
   title: emoji("Hi all, I'm Daga"),
   subTitle: emoji(
-    "🇨🇴 I'm a Colombian Full Stack Developer 💻 and an active researcher 🔬 with the Infelcm research group at UPTC 🏫. I lead projects focused on artificial intelligence 🤖 and enjoy exploring innovative solutions in technology 🚀."
+    "🇨🇴 I'm a Colombian Full Stack Developer 💻 and an active researcher 🔬 with the Infelcom research group at UPTC 🏫. I lead projects focused on artificial intelligence 🤖 and enjoy exploring innovative solutions in technology 🚀."
   ),
   resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -153,6 +153,16 @@ const educationInfo = {
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
+    {
+      role: "JR developer II",
+      company: "ControlBox Corp.",
+      companylogo: require("./assets/images/controlbox_logo.webp"),
+      date: "Jul 2024 – Current",
+      desc: "",
+      descBullets: [
+        ""
+      ]
+    },
     {
       role: "Jr Developer / University Intern",
       company: "Datanalisis de Colombia SAS",
@@ -328,7 +338,7 @@ const contactInfo = {
   email_address: "daga70414@gmail.com"
 };
 
-const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
