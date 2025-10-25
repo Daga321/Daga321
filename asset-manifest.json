@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c23251.css",
-    "main.js": "/static/js/main.ae270984.js",
+    "main.js": "/static/js/main.b8141291.js",
     "static/css/64.3b010775.chunk.css": "/static/css/64.3b010775.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/static/js/64.56dc6704.chunk.js",
     "static/css/769.5bc05660.chunk.css": "/static/css/769.5bc05660.chunk.css",
@@ -13,6 +13,7 @@
     "static/media/Datanalisis_logo.webp": "/static/media/Datanalisis_logo.3f5c96339ebf1ee563dc.webp",
     "static/media/UPTC_logo.webp": "/static/media/UPTC_logo.3d457aef7b461dcf2fec.webp",
     "static/media/contactMailDark.svg": "/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
+    "static/media/controlbox_logo.webp": "/static/media/controlbox_logo.a2667ad43c1e4a16ce26.webp",
     "static/media/developerActivity.svg": "/static/media/developerActivity.29c4fec095cd10e90a0be2feb394d6e1.svg",
     "static/media/skill.svg": "/static/media/skill.4c716dd4f4cec82d5f3557b8d5161016.svg",
     "static/media/manOnTable.svg": "/static/media/manOnTable.c9e9ba4ec24f829c68609069e77c6a05.svg",
@@ -21,7 +22,7 @@
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
     "main.e6c23251.css.map": "/static/css/main.e6c23251.css.map",
-    "main.ae270984.js.map": "/static/js/main.ae270984.js.map",
+    "main.b8141291.js.map": "/static/js/main.b8141291.js.map",
     "64.3b010775.chunk.css.map": "/static/css/64.3b010775.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/static/js/64.56dc6704.chunk.js.map",
     "769.5bc05660.chunk.css.map": "/static/css/769.5bc05660.chunk.css.map",
@@ -29,6 +30,6 @@
   },
   "entrypoints": [
     "static/css/main.e6c23251.css",
-    "static/js/main.ae270984.js"
+    "static/js/main.b8141291.js"
   ]
 }
