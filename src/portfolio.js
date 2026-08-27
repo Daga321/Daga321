@@ -157,10 +157,13 @@ const workExperiences = {
       role: "JR developer II",
       company: "ControlBox Corp.",
       companylogo: require("./assets/images/controlbox_logo.webp"),
-      date: "Jul 2024 – Current",
-      desc: "",
+      date: "Jul 2025 – Current",
+      desc: "I am currently working as a Full Stack Developer, contributing to the continuous improvement of a SaaS platform within the financial services and remittance space. My work involves developing and enhancing features across both administrative and end-user systems, with a focus on scalability, usability, and reliable integrations.",
       descBullets: [
-        ""
+        "Continuously improve the UI and UX across both administrative and end-user systems.",
+        "Implement and integrate banking services, international biometric identification solutions, and other third-party APIs into end-to-end workflows.",
+        "Develop, document, and support the implementation of remittance APIs across different systems and business entities, including storage, e-commerce, and other customer-facing solutions.",
+        "Continuously support production deployments, feature releases, and post-release improvements across the platform."
       ]
     },
     {
@@ -234,11 +237,24 @@ const achievementSection = {
 
   achievementsCards: [
     {
+      title: "Monthly Employment Recognition",
+      subtitle:
+        "Highlighted for going beyond requirements, challenging assumptions, and identifying improvements that benefit both the business and the end-user experience. My adaptability, attention to detail, and ability to quickly contribute after a short onboarding period were also recognized by the team.",
+      image: require("./assets/images/Employee-of-ther-month.webp"),
+      imageAlt: "Monthly Employment Recognition logo",
+      footerLink: [
+        {
+          name: "View Linkedin Post",
+          url: "https://lnkd.in/p/eCA9aWvA"
+        }
+      ]
+    },
+    {
       title: "AWS Community Day Colombia 2025",
       subtitle:
         "Participated in AWS Community Day Colombia, engaging with cloud professionals and expanding my expertise in AWS technologies.",
       image: require("./assets/images/AWS_community_day_logo.webp"),
-      imageAlt: "AWS Community Day Colombia logo",
+      imageAlt: "AWS Community Day Colombia 2025 logo",
       footerLink: []
     },
     {
@@ -338,7 +354,7 @@ const contactInfo = {
   email_address: "daga70414@gmail.com"
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,

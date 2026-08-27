@@ -4,6 +4,8 @@ on:
   pull_request:
     branches:
       - Developer-Folio
+  workflow_dispatch:
+  
 jobs:
   check-format:
     runs-on: ubuntu-latest
