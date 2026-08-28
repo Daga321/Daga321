@@ -45,10 +45,15 @@ export default function Projects() {
   ) {
     return (
       <Suspense fallback={renderLoader()}>
-        <div className="main" id="opensource">
-          <h1 className="project-title">Open Source Projects</h1>
+        <div className="main">
+          <h1
+            id="opensource"
+            className="project-title section-anchor"
+          >
+            Open Source Projects
+          </h1>
           <div className="repo-cards-div-main">
-            {repo.map((v, i) => {
+            {repo.reverse().map((v, i) => {
               if (!v) {
                 console.error(
                   `Github Object for repository number : ${i} is undefined`

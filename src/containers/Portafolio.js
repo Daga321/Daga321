@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import {useLocation} from "react-router-dom";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
@@ -21,7 +20,6 @@ import {splashScreen} from "../portfolio";
 import "./Portafolio.scss";
 
 const Portafolio = () => {
-  const location = useLocation();
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
 
@@ -42,19 +40,65 @@ const Portafolio = () => {
       return;
     }
 
-    const sectionId = location.pathname.replace("/", "");
+    const updateHeaderOffset = () => {
+      const header = document.querySelector("header.header");
+      const headroomWrapper = document.querySelector(".headroom-wrapper");
+      const measuredHeader = header || headroomWrapper;
 
-    if (!sectionId) {
-      window.scrollTo({top: 0, behavior: "smooth"});
-      return;
-    }
+      if (!measuredHeader) {
+        return false;
+      }
 
-    const section = document.getElementById(sectionId);
+      const headerOffset = measuredHeader.getBoundingClientRect().height;
+      document.documentElement.style.setProperty(
+        "--header-offset",
+        `${headerOffset}px`
+      );
+      return true;
+    };
 
-    if (section) {
-      section.scrollIntoView({behavior: "smooth", block: "start"});
-    }
-  }, [isShowingSplashAnimation, location.pathname]);
+    let resizeObserver = null;
+    let animationFrameId = null;
+    let cancelled = false;
+
+    const tryUpdateHeaderOffset = () => {
+      if (cancelled) {
+        return;
+      }
+
+      if (!updateHeaderOffset()) {
+        animationFrameId = window.requestAnimationFrame(tryUpdateHeaderOffset);
+        return;
+      }
+
+      const header = document.querySelector("header.header");
+      const headroomWrapper = document.querySelector(".headroom-wrapper");
+      const measuredHeader = header || headroomWrapper;
+
+      if (measuredHeader && "ResizeObserver" in window) {
+        resizeObserver = new ResizeObserver(() => {
+          updateHeaderOffset();
+        });
+        resizeObserver.observe(measuredHeader);
+      } else {
+        window.addEventListener("resize", updateHeaderOffset);
+      }
+    };
+
+    tryUpdateHeaderOffset();
+
+    return () => {
+      cancelled = true;
+      if (animationFrameId) {
+        window.cancelAnimationFrame(animationFrameId);
+      }
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+      } else {
+        window.removeEventListener("resize", updateHeaderOffset);
+      }
+    };
+  }, [isShowingSplashAnimation]);
 
   return (
     <>

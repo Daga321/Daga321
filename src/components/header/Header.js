@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
 import Headroom from "react-headroom";
-import {Link} from "react-router-dom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
@@ -35,13 +34,13 @@ function Header() {
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <Link to="/" className="logo" onClick={closeMenu}>
+        <a href="/" className="logo" onClick={closeMenu}>
           <span className="grey-color"> &lt;</span>
           <span className={isDark ? "logo-name dark-logo" : "logo-name"}>
             {greeting.username}
           </span>
           <span className="grey-color">/&gt;</span>
-        </Link>
+        </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label
           className="menu-icon"
@@ -53,57 +52,57 @@ function Header() {
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           {viewSkills && (
             <li>
-              <Link to="/skills" onClick={closeMenu}>
+              <a href="#skills" onClick={closeMenu}>
                 Skills
-              </Link>
+              </a>
             </li>
           )}
           {viewExperience && (
             <li>
-              <Link to="/experience" onClick={closeMenu}>
+              <a href="#experience" onClick={closeMenu}>
                 Work Experiences
-              </Link>
+              </a>
             </li>
           )}
           {viewOpenSource && (
             <li>
-              <Link to="/opensource" onClick={closeMenu}>
+              <a href="#opensource" onClick={closeMenu}>
                 Open Source
-              </Link>
+              </a>
             </li>
           )}
           {viewAchievement && (
             <li>
-              <Link to="/achievements" onClick={closeMenu}>
+              <a href="#achievements" onClick={closeMenu}>
                 Achievements
-              </Link>
+              </a>
             </li>
           )}
           {viewBlog && (
             <li>
-              <Link to="/blogs" onClick={closeMenu}>
+              <a href="#blogs" onClick={closeMenu}>
                 Blogs
-              </Link>
+              </a>
             </li>
           )}
           {viewTalks && (
             <li>
-              <Link to="/talks" onClick={closeMenu}>
+              <a href="#talks" onClick={closeMenu}>
                 Talks
-              </Link>
+              </a>
             </li>
           )}
           {viewResume && (
             <li>
-              <Link to="/resume" onClick={closeMenu}>
+              <a href="#resume" onClick={closeMenu}>
                 Resume
-              </Link>
+              </a>
             </li>
           )}
           <li>
-            <Link to="/contact" onClick={closeMenu}>
+            <a href="#contact" onClick={closeMenu}>
               Contact Me
-            </Link>
+            </a>
           </li>
           <li>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

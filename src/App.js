@@ -21,11 +21,6 @@ function App() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Main} />
-            <Route
-              exact
-              path="/:section(skills|experience|opensource|achievements|blogs|talks|resume|contact)"
-              component={Main}
-            />
             <Redirect to="/" />
           </Switch>
         </BrowserRouter>

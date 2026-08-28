@@ -16,9 +16,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+:root {
+  --header-offset: 0px;
+}
 html,
 body {
   scroll-behavior: smooth;
+}
+.section-anchor {
+  scroll-margin-top: var(--header-offset);
 }
 body {
   margin: 0;

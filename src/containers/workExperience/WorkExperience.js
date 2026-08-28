@@ -9,11 +9,13 @@ export default function WorkExperience() {
   const {isDark} = useContext(StyleContext);
   if (workExperiences.display) {
     return (
-      <div id="experience">
+      <div>
         <Fade bottom duration={1000} distance="20px">
           <div className="experience-container" id="workExperience">
             <div>
-              <h1 className="experience-heading">Experiences</h1>
+              <h1 id="experience" className="experience-heading section-anchor">
+                Experiences
+              </h1>
               <div className="experience-cards-div">
                 {workExperiences.experience.map((card, i) => {
                   return (

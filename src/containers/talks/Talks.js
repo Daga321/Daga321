@@ -12,9 +12,11 @@ export default function Talks() {
   }
   return (
     <Fade bottom duration={1000} distance="20px">
-      <div className="main" id="talks">
+      <div className="main">
         <div className="talk-header">
-          <h1 className="talk-header-title">{talkSection.title}</h1>
+          <h1 id="talks" className="talk-header-title section-anchor">
+            {talkSection.title}
+          </h1>
           <p
             className={
               isDark
