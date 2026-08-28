@@ -18,9 +18,9 @@ import Twitter from "./twitter-embed/twitter";
 import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
-import "./Main.scss";
+import "./Portafolio.scss";
 
-const Main = () => {
+const Portafolio = () => {
   const location = useLocation();
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] =
     useState(true);
@@ -84,4 +84,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Portafolio;

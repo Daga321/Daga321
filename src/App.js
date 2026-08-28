@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.scss";
 import {BrowserRouter, Redirect, Route, Switch} from "react-router-dom";
-import Main from "./containers/Main";
+import Main from "./containers/Portafolio";
 import {StyleProvider} from "./contexts/StyleContext";
 import {useLocalStorage} from "./hooks/useLocalStorage";
 
