@@ -12,7 +12,6 @@ on:
       - Developer-Folio
   schedule:
     - cron: "0 12 * * 1" # see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
-  workflow_dispatch:
   
 jobs:
   build-and-deploy:

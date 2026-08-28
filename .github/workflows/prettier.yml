@@ -1,10 +1,10 @@
 name: Check Format
 on:
+  workflow_dispatch:
   push:
   pull_request:
     branches:
       - Developer-Folio
-  workflow_dispatch:
   
 jobs:
   check-format:
