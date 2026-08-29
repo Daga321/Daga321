@@ -52,9 +52,9 @@ const skillsSection = {
     emoji(
       "⚡ Backend development with Python (Django), Java (Spring Boot), and C# (.NET Core)"
     ),
-    emoji("⚡ Game and simulation development with Unity and C#"),
+    emoji("⚡ Game and simulation development with Unity and C#, or Phaser"),
     emoji(
-      "⚡ Web development with Blazor, .NET Core, HTML, JavaScript, and CSS"
+      "⚡ Web development with Blazor, .NET Core, React, Vue, HTML, JavaScript, and CSS"
     ),
     emoji(
       "⚡ Management and modeling of relational databases: SQL Server, MySQL, PostgreSQL"
@@ -190,6 +190,15 @@ const workExperiences = {
         "Backend development with .NET REST APIs",
         "Deployment automation and DevOps",
         "System support and maintenance"
+      ]
+    },
+    {
+      role: "Full Stack .NET Developer",
+      company: "Freelancer",
+      companylogo: require("./assets/images/UPTC_logo.webp"),
+      date: "Jun 2022 – May 2024",
+      desc: "During my final three semesters at university, I worked as a Programming Instructor, supporting students throughout their academic courses. My responsibilities included answering their questions, helping them overcome technical challenges, and strengthening their programming skills across multiple technology stacks, including PHP, virtualization, web development, web services, and RESTful APIs. My main goal was to reinforce their technical foundations and knowledge while helping them improve their overall learning experience and academic performance.",
+      descBullets: [
       ]
     }
   ]
