@@ -3,24 +3,32 @@ import "./TagFilters.scss";
 import TagChip from "../../components/tagChip/TagChip";
 
 export default function TagFilters({
-  tags,
-  activeTags,
-  onToggleTag,
+  filters,
+  activeFilters,
+  onChange,
   onClearTags,
   isDark
 }) {
-  const hasActiveTags = activeTags.length > 0;
+  const hasActiveFilters = Object.values(activeFilters).some(
+    (value) => value !== "All"
+  );
+
+  const filterGroups = [
+    {key: "issuers", filterName: "issuer", label: "Accrediting company"},
+    {key: "services", filterName: "service", label: "Service"},
+    {key: "focus", filterName: "focus", label: "Focus"}
+  ];
 
   return (
     <div className={isDark ? "dark-mode tag-filters-div" : "tag-filters-div"}>
       <div className="tag-filters-header">
         <div>
-          <p className="tag-filters-label">Filter by tag</p>
+          <p className="tag-filters-label">Filter certifications</p>
           <p className="tag-filters-help">
-            Select one or more tags to narrow the timeline.
+            Combine the filters to narrow the timeline.
           </p>
         </div>
-        {hasActiveTags ? (
+        {hasActiveFilters ? (
           <button
             type="button"
             className="tag-filters-clear"
@@ -31,21 +39,24 @@ export default function TagFilters({
         ) : null}
       </div>
 
-      <div className="tag-filters-chips">
-        <TagChip
-          label="All"
-          selected={!hasActiveTags}
-          onClick={() => onToggleTag("All")}
-          isDark={isDark}
-        />
-        {tags.map((tag) => (
-          <TagChip
-            key={tag}
-            label={tag}
-            selected={activeTags.includes(tag)}
-            onClick={() => onToggleTag(tag)}
-            isDark={isDark}
-          />
+      <div className="tag-filter-groups">
+        {filterGroups.map(({key, filterName, label}) => (
+          <div className="tag-filter-group" key={key}>
+            <p className="tag-filter-group-label">{label}</p>
+            <div className="tag-filters-chips">
+              {filters[key].map((filter) => (
+                <TagChip
+                  key={filter}
+                  label={filter}
+                  selected={activeFilters[filterName] === filter}
+                  onClick={() =>
+                    onChange(filterName, filter)
+                  }
+                  isDark={isDark}
+                />
+              ))}
+            </div>
+          </div>
         ))}
       </div>
     </div>

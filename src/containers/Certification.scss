@@ -1,7 +1,11 @@
 @import "../_globalColor";
 
 .certification-main-div {
+  width: calc(100% - 3rem);
+  max-width: 1120px;
+  margin: 0 auto;
   padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 
 .certification-header {
@@ -26,4 +30,14 @@
 
 .main {
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .certification-main-div {
+    width: calc(100% - 1.5rem);
+  }
+
+  .certification-heading {
+    font-size: 2.5rem;
+  }
 }

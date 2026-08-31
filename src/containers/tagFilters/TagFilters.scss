@@ -46,12 +46,27 @@
   gap: 0.65rem;
 }
 
+.tag-filter-groups {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.tag-filter-group-label {
+  margin: 0 0 0.55rem;
+  color: $subTitle;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .dark-mode.tag-filters-div {
   background: rgba(18, 18, 18, 0.9);
   border-color: rgba(255, 255, 255, 0.08);
 }
 
 .dark-mode .tag-filters-label,
-.dark-mode .tag-filters-help {
+.dark-mode .tag-filters-help,
+.dark-mode .tag-filter-group-label {
   color: $textColorDark;
 }
