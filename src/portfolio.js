@@ -254,7 +254,8 @@ const achievementSection = {
       footerLink: [
         {
           name: "View Linkedin Post",
-          url: "https://lnkd.in/p/eCA9aWvA"
+          url: "https://lnkd.in/p/eCA9aWvA",
+          newTab: true
         }
       ]
     },
@@ -275,7 +276,8 @@ const achievementSection = {
       footerLink: [
         {
           name: "View Certifications",
-          url: "https://drive.google.com/drive/folders/1xlZrT0ybE4DTRnvkXQXBhMqW3iOMumD4"
+          url: "/certifications",
+          newTab: false
         }
       ]
     }

@@ -1,0 +1,41 @@
+@import "../../_globalColor";
+
+.timeline-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.timeline-marker {
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-empty {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: 14px;
+  background: $lightBackground2;
+  border: 1px dashed $lightBorder1;
+  color: $subTitle;
+  text-align: center;
+}
+
+.dark-mode.timeline-empty {
+  background: rgba(18, 18, 18, 0.9);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: $textColorDark;
+}

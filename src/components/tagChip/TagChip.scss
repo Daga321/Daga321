@@ -1,0 +1,48 @@
+@import "../../_globalColor";
+
+.tag-chip {
+  border: 1px solid $lightBorder1;
+  background: transparent;
+  color: $subTitle;
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tag-chip:hover {
+  transform: translateY(-1px);
+  border-color: $buttonColor;
+  color: $buttonColor;
+}
+
+.tag-chip-selected {
+  background: $buttonColor;
+  border-color: $buttonColor;
+  color: $lightBackground3;
+}
+
+.tag-chip-selected:hover {
+  color: $lightBackground3;
+  border-color: $buttonHover;
+  background: $buttonHover;
+}
+
+.dark-mode.tag-chip {
+  border-color: rgba(255, 255, 255, 0.14);
+  color: $textColorDark;
+}
+
+.dark-mode.tag-chip:hover {
+  color: $textColorDark;
+}
+
+.dark-mode.tag-chip-selected {
+  color: $darkBackground;
+}
+
+.dark-mode.tag-chip-selected:hover {
+  color: $darkBackground;
+}

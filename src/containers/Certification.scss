@@ -1,0 +1,29 @@
+@import "../_globalColor";
+
+.certification-main-div {
+  padding-top: 1rem;
+}
+
+.certification-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.certification-heading {
+  font-size: 3.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.certification-subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.dark-mode .certification-subtitle {
+  color: $textColorDark;
+}
+
+.main {
+  width: 100%;
+}

@@ -1,0 +1,57 @@
+@import "../../_globalColor";
+
+.tag-filters-div {
+  margin: 2rem 0 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  background: $lightBackground2;
+  border: 1px solid $lightBorder1;
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+}
+
+.tag-filters-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag-filters-label {
+  margin: 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $subTitle;
+}
+
+.tag-filters-help {
+  margin: 0.35rem 0 0;
+  color: $subTitle;
+}
+
+.tag-filters-clear {
+  border: none;
+  background: transparent;
+  color: $buttonColor;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.tag-filters-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.dark-mode.tag-filters-div {
+  background: rgba(18, 18, 18, 0.9);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .tag-filters-label,
+.dark-mode .tag-filters-help {
+  color: $textColorDark;
+}

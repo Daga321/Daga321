@@ -1,14 +1,30 @@
 import React from "react";
+import {useHistory} from "react-router-dom";
 import "./AchievementCard.scss";
 
 export default function AchievementCard({cardInfo, isDark}) {
-  function openUrlInNewTab(url, name) {
+  const history = useHistory();
+
+  function openUrl(url, name, newTab = false) {
     if (!url) {
       console.log(`URL for ${name} not found`);
       return;
     }
-    var win = window.open(url, "_blank");
-    win.focus();
+
+    if (url.startsWith("/")) {
+      history.push(url);
+      return;
+    }
+
+    if (newTab) {
+      const win = window.open(url, "_blank", "noopener,noreferrer");
+      if (win) {
+        win.focus();
+      }
+      return;
+    }
+
+    window.location.assign(url);
   }
 
   return (
@@ -36,7 +52,7 @@ export default function AchievementCard({cardInfo, isDark}) {
               className={
                 isDark ? "dark-mode certificate-tag" : "certificate-tag"
               }
-              onClick={() => openUrlInNewTab(v.url, v.name)}
+              onClick={() => openUrl(v.url, v.name, v.newTab)}
             >
               {v.name}
             </span>

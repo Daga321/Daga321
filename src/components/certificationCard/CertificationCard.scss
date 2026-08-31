@@ -1,0 +1,134 @@
+@import "../../_globalColor";
+
+.certification-card {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 18px;
+  background: $lightBackground2;
+  border: 1px solid $lightBorder1;
+  box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
+  transition: all 0.25s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-2px);
+  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+}
+
+.dark-mode.certification-card:hover {
+  box-shadow: $achievementCertificateCardHoverDark 0px 20px 30px -10px;
+}
+
+.certification-preview-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.certification-preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.certification-content-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.certification-meta {
+  margin-bottom: 0.35rem;
+}
+
+.certification-issuer {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.05);
+  color: $subTitle;
+}
+
+.certification-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: $titleColor;
+}
+
+.certification-summary {
+  margin: 0 0 1rem;
+  color: $cardSubtitle;
+  line-height: 1.7;
+}
+
+.certification-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.certification-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.05);
+  color: $subTitle;
+  font-size: 0.82rem;
+}
+
+.certification-action {
+  align-self: flex-start;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  background: $buttonColor;
+  color: $lightBackground3;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.certification-action:hover {
+  background: $buttonHover;
+}
+
+.dark-mode.certification-card {
+  background: rgba(18, 18, 18, 0.9);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode .certification-issuer,
+.dark-mode .certification-tag {
+  background: rgba(255, 255, 255, 0.08);
+  color: $textColorDark;
+}
+
+.dark-mode .certification-title,
+.dark-mode .certification-summary {
+  color: $textColorDark;
+}
+
+@media (max-width: 768px) {
+  .certification-card {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-preview-div {
+    min-height: 220px;
+  }
+}
