@@ -193,8 +193,8 @@ const workExperiences = {
       ]
     },
     {
-      role: "Full Stack .NET Developer",
-      company: "Freelancer",
+      role: "Programming Instructor",
+      company: "UPTC",
       companylogo: require("./assets/images/UPTC_logo.webp"),
       date: "Jun 2022 – May 2024",
       desc: "During my final three semesters at university, I worked as a Programming Instructor, supporting students throughout their academic courses. My responsibilities included answering their questions, helping them overcome technical challenges, and strengthening their programming skills across multiple technology stacks, including PHP, virtualization, web development, web services, and RESTful APIs. My main goal was to reinforce their technical foundations and knowledge while helping them improve their overall learning experience and academic performance.",
