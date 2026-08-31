@@ -40,6 +40,22 @@
   color: $textColorDark !important;
 }
 
+.dark-menu .header-page-link {
+  color: $textColorDark !important;
+}
+
+.dark-menu .header-page-link:hover {
+  color: $textColorDark !important;
+}
+
+.dark-menu .active-page-link {
+  color: $buttonColor !important;
+}
+
+.dark-menu .active-section-link {
+  color: $buttonColor !important;
+}
+
 /* Excluir el toggle switch del efecto hover en modo oscuro */
 .dark-menu li:last-child a::after {
   display: none;
@@ -56,18 +72,21 @@
   margin: 0px auto;
 }
 
-.header ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.header .menu {
+  clear: both;
+  max-height: 0;
   overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .grey-color {
   color: $subTitle;
 }
 
-.header li a {
+.header a {
   display: block;
   padding: 15px 20px;
   color: $textColor;
@@ -76,7 +95,7 @@
   transition: color 0.3s ease;
 }
 
-.header li a::after {
+.header a::after {
   content: "";
   position: absolute;
   bottom: 10px;
@@ -89,35 +108,150 @@
   transition: width 0.3s ease;
 }
 
-.header li a:hover::after {
+.header a:hover::after {
   width: calc(100% - 40px);
 }
 
-.header li a:hover {
+.header a:hover {
   color: $textColor;
 }
 
-/* Excluir el toggle switch del efecto hover pero mantener alineación */
-.header li:last-child a {
-  padding: 15px 20px;
+.header .active-page-link {
+  color: $buttonColor;
 }
 
-.header li:last-child a::after {
+.header .active-page-link::after {
+  width: calc(100% - 40px);
+}
+
+.header .header-brand-row,
+.header .header-toggle-row,
+.header .header-top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header .header-page-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.header .header-top-actions {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.header .header-page-link {
+  border-radius: 999px;
+  padding: 0.75rem 1rem;
+  background: transparent;
+}
+
+.header .header-section-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 0.1rem;
+}
+
+.header .header-section-links li a,
+.header .header-section-link {
+  border-radius: 0;
+  /* Gives the shared underline formula enough room for short labels. */
+  padding: 0.2rem 20px;
+}
+
+.header .header-section-link {
+  background: transparent;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header .header-section-links li a.header-section-link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.35rem;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: $buttonHover;
+  border-radius: 0;
+  transition: width 0.3s ease;
+}
+
+.header .header-section-links li a.header-section-link:hover::after,
+.header .header-section-links li a.active-section-link::after {
+  width: calc(100% - 40px);
+}
+
+/* Keep the subsection underline below the label in dark mode too. */
+.dark-menu .header-section-links li a.header-section-link::after {
+  bottom: -0.35rem;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  transform: translateX(-50%);
+  background-color: $buttonHover;
+  border-radius: 0;
+}
+
+.dark-menu .header-section-links li a.header-section-link:hover::after,
+.dark-menu .header-section-links li a.active-section-link::after {
+  width: calc(100% - 40px);
+}
+
+.header .header-section-link:hover {
+  background: transparent;
+  transform: none;
+}
+
+.dark-menu .header-section-link {
+  background: transparent;
+}
+
+.dark-menu .header-section-link:hover {
+  background: transparent;
+}
+
+.header .active-section-link {
+  color: $buttonColor;
+  font-weight: 600;
+}
+
+.header .header-toggle-row a {
+  padding: 0;
+}
+
+.header .header-toggle-row a::after,
+.header .header-toggle-row a:hover::after {
   display: none;
 }
 
-.header li:last-child a:hover {
+.header .header-toggle-row a:hover {
   background-color: transparent;
 }
 
 .header .logo {
   display: block;
   flex: none;
-  float: left;
   font-size: 1.5em;
   text-decoration: none;
-  margin-top: 10px;
   line-height: normal;
+  padding: 0;
 }
 
 .header .logo-name {
@@ -134,12 +268,6 @@
 }
 
 /* menu */
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
 
 /* menu icon */
 
@@ -201,7 +329,7 @@
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 486px;
+  max-height: 800px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -224,9 +352,6 @@
 /* 48em = 768px */
 
 @media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
   .header {
     display: flex;
     align-items: center;
@@ -234,6 +359,18 @@
   }
   .header .menu {
     max-height: none;
+    overflow: visible;
+    flex: 1;
+    align-items: flex-end;
+  }
+  .header .header-brand-row {
+    width: 100%;
+  }
+  .header .header-top-actions {
+    margin-left: auto;
+  }
+  .header .header-section-links {
+    width: 100%;
   }
   .header .menu-icon {
     display: none;

@@ -1,4 +1,5 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useState} from "react";
+import {Link, useLocation} from "react-router-dom";
 import Headroom from "react-headroom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
@@ -16,6 +17,10 @@ import {
 
 function Header() {
   const {isDark} = useContext(StyleContext);
+  const location = useLocation();
+  const isCertificationPage = location.pathname === "/certifications";
+  const isPortfolioPage = location.pathname === "/";
+  const [activeHash, setActiveHash] = useState(window.location.hash || "");
   const viewExperience = workExperiences.display;
   const viewOpenSource = openSource.display;
   const viewSkills = skillsSection.display;
@@ -23,6 +28,19 @@ function Header() {
   const viewBlog = blogSection.display;
   const viewTalks = talkSection.display;
   const viewResume = resumeSection.display;
+
+  useEffect(() => {
+    const updateHash = () => {
+      setActiveHash(window.location.hash || "");
+    };
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+
+    return () => {
+      window.removeEventListener("hashchange", updateHash);
+    };
+  }, [location.pathname]);
 
   const closeMenu = () => {
     const menuButton = document.getElementById("menu-btn");
@@ -34,13 +52,6 @@ function Header() {
   return (
     <Headroom>
       <header className={isDark ? "dark-menu header" : "header"}>
-        <a href="/" className="logo" onClick={closeMenu}>
-          <span className="grey-color"> &lt;</span>
-          <span className={isDark ? "logo-name dark-logo" : "logo-name"}>
-            {greeting.username}
-          </span>
-          <span className="grey-color">/&gt;</span>
-        </a>
         <input className="menu-btn" type="checkbox" id="menu-btn" />
         <label
           className="menu-icon"
@@ -49,68 +60,171 @@ function Header() {
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
-        <ul className={isDark ? "dark-menu menu" : "menu"}>
-          {viewSkills && (
-            <li>
-              <a href="#skills" onClick={closeMenu}>
-                Skills
-              </a>
-            </li>
+        <div className={isDark ? "dark-menu menu" : "menu"}>
+          <div className="header-brand-row">
+            <Link to="/" className="logo" onClick={closeMenu}>
+              <span className="grey-color"> &lt;</span>
+              <span className={isDark ? "logo-name dark-logo" : "logo-name"}>
+                {greeting.username}
+              </span>
+              <span className="grey-color">/&gt;</span>
+            </Link>
+            <div className="header-top-actions">
+              <div className="header-page-links">
+                <Link
+                  to="/"
+                  className={
+                    isPortfolioPage
+                      ? "header-page-link active-page-link"
+                      : "header-page-link"
+                  }
+                  onClick={closeMenu}
+                >
+                  Portfolio
+                </Link>
+                <Link
+                  to="/certifications"
+                  className={
+                    isCertificationPage
+                      ? "header-page-link active-page-link"
+                      : "header-page-link"
+                  }
+                  onClick={closeMenu}
+                >
+                  Certifications
+                </Link>
+              </div>
+              <div className="header-toggle-row">
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+                <a>
+                  <ToggleSwitch />
+                </a>
+              </div>
+            </div>
+          </div>
+          {isPortfolioPage && (
+            <ul className="header-section-links">
+              {viewSkills && (
+                <li>
+                  <a
+                    href="#skills"
+                    className={
+                      activeHash === "#skills"
+                        ? "header-section-link active-section-link"
+                        : "header-section-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    Skills
+                  </a>
+                </li>
+              )}
+              {viewExperience && (
+                <li>
+                  <a
+                    href="#experience"
+                    className={
+                      activeHash === "#experience"
+                        ? "header-section-link active-section-link"
+                        : "header-section-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    Work Experiences
+                  </a>
+                </li>
+              )}
+              {viewOpenSource && (
+                <li>
+                  <a
+                    href="#opensource"
+                    className={
+                      activeHash === "#opensource"
+                        ? "header-section-link active-section-link"
+                        : "header-section-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    Open Source
+                  </a>
+                </li>
+              )}
+              {viewAchievement && (
+                <li>
+                  <a
+                    href="#achievements"
+                    className={
+                      activeHash === "#achievements"
+                        ? "header-section-link active-section-link"
+                        : "header-section-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    Achievements
+                  </a>
+                </li>
+              )}
+              {viewBlog && (
+                <li>
+                  <a
+                    href="#blogs"
+                    className={
+                      activeHash === "#blogs"
+                        ? "header-section-link active-section-link"
+                        : "header-section-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    Blogs
+                  </a>
+                </li>
+              )}
+              {viewTalks && (
+                <li>
+                  <a
+                    href="#talks"
+                    className={
+                      activeHash === "#talks"
+                        ? "header-section-link active-section-link"
+                        : "header-section-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    Talks
+                  </a>
+                </li>
+              )}
+              {viewResume && (
+                <li>
+                  <a
+                    href="#resume"
+                    className={
+                      activeHash === "#resume"
+                        ? "header-section-link active-section-link"
+                        : "header-section-link"
+                    }
+                    onClick={closeMenu}
+                  >
+                    Resume
+                  </a>
+                </li>
+              )}
+              <li>
+                <a
+                  href="#contact"
+                  className={
+                    activeHash === "#contact"
+                      ? "header-section-link active-section-link"
+                      : "header-section-link"
+                  }
+                  onClick={closeMenu}
+                >
+                  Contact Me
+                </a>
+              </li>
+            </ul>
           )}
-          {viewExperience && (
-            <li>
-              <a href="#experience" onClick={closeMenu}>
-                Work Experiences
-              </a>
-            </li>
-          )}
-          {viewOpenSource && (
-            <li>
-              <a href="#opensource" onClick={closeMenu}>
-                Open Source
-              </a>
-            </li>
-          )}
-          {viewAchievement && (
-            <li>
-              <a href="#achievements" onClick={closeMenu}>
-                Achievements
-              </a>
-            </li>
-          )}
-          {viewBlog && (
-            <li>
-              <a href="#blogs" onClick={closeMenu}>
-                Blogs
-              </a>
-            </li>
-          )}
-          {viewTalks && (
-            <li>
-              <a href="#talks" onClick={closeMenu}>
-                Talks
-              </a>
-            </li>
-          )}
-          {viewResume && (
-            <li>
-              <a href="#resume" onClick={closeMenu}>
-                Resume
-              </a>
-            </li>
-          )}
-          <li>
-            <a href="#contact" onClick={closeMenu}>
-              Contact Me
-            </a>
-          </li>
-          <li>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a>
-              <ToggleSwitch />
-            </a>
-          </li>
-        </ul>
+        </div>
       </header>
     </Headroom>
   );

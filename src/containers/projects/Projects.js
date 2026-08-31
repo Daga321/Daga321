@@ -53,7 +53,7 @@ export default function Projects() {
             Open Source Projects
           </h1>
           <div className="repo-cards-div-main">
-            {repo.reverse().map((v, i) => {
+            {repo.map((v, i) => {
               if (!v) {
                 console.error(
                   `Github Object for repository number : ${i} is undefined`
