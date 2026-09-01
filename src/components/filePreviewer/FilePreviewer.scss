@@ -1,16 +1,47 @@
+@import "../../_globalColor";
+
 .file-previewer {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
   border: 0;
 }
 
+.file-previewer-frame {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  background: $lightBackground3;
+}
+
+.file-previewer-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $lightBackground3;
+  z-index: 1;
+}
+
+.file-previewer-loading-animation {
+  width: 68%;
+  max-width: 210px;
+}
+
 .file-previewer-pdf {
-  min-height: 180px;
-  background: #fff;
+  background: $lightBackground3;
+  overflow: hidden;
+}
+
+.dark-mode .file-previewer-frame,
+.dark-mode .file-previewer-loading,
+.dark-mode .file-previewer-pdf {
+  background: #282828;
 }
 
 .file-previewer-image {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .file-previewer-fallback {

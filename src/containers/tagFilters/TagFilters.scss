@@ -2,9 +2,9 @@
 
 .tag-filters-div {
   margin: 2rem 0 1.5rem;
-  padding: 1.25rem 1.5rem;
-  border-radius: 18px;
-  background: $lightBackground2;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: $lightBackground2;
   border: 1px solid $lightBorder1;
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
 }
@@ -61,8 +61,9 @@
 }
 
 .dark-mode.tag-filters-div {
-  background: rgba(18, 18, 18, 0.9);
+  background-color: $darkBackground;
   border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
 }
 
 .dark-mode .tag-filters-label,
