@@ -1,5 +1,3 @@
-const certificationLogo = require("./assets/images/Certifications_logo.webp");
-
 const certificationSection = {
   title: "Certifications",
   subtitle:
@@ -13,8 +11,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Codigo%20Facilito/Certificado%20bootcamp%20GitHub%20Foundations.pdf",
       tags: ["GitHub", "DevTools", "Basics"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "GitHub Foundations",
@@ -23,8 +19,6 @@ const certificationSection = {
         "Official certification for GitHub fundamentals and collaborative development workflows.",
       fileUrl: "/documents/academic/GitHub/Certificado%20GitHub%20Foundations.pdf",
       tags: ["GitHub", "DevTools"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "GitHub Actions",
@@ -34,8 +28,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Codigo%20Facilito/Certificado%20-%20Curso%20de%20GitHub%20Actions.pdf",
       tags: ["GitHub", "DevOps", "Automation"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Visual Studio Code and GitHub Copilot",
@@ -45,8 +37,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Codigo%20Facilito/Certificado%20-%20Curso%20de%20Visual%20Studio%20Code%20y%20GitHub%20Copilot.pdf",
       tags: ["GitHub", "DevTools", "AI"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Software Development Bootcamp with Kiro",
@@ -56,8 +46,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Codigo%20Facilito/Certificado%20-%20Bootcamp%20Desarrollo%20de%20software%20basado%20en%20agentes%20con%20Kiro.pdf",
       tags: ["AI", "DevTools", "Automation"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Basic Programming Skills",
@@ -67,8 +55,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Mintic/Formacion%20basica%20en%20habilidades%20de%20programacion%20Mision%20TIC%202022.pdf",
       tags: ["Basics", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Data Analytics Fundamentals",
@@ -78,8 +64,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Mintic/Fundamentos%20en%20analitica%20de%20datos.pdf",
       tags: ["Data", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Artificial Intelligence Basics",
@@ -89,8 +73,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Mintic/Inteligencia%20Artificial%20Nivel%20B%C3%A1sico.pdf",
       tags: ["AI", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Customer Support and Service",
@@ -100,8 +82,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/Client%20service/Diploma%20atencion%20al%20cliente%20y%20soporte%20a%20usuarios.pdf",
       tags: ["Customer Service", "Support"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Customer Service",
@@ -111,8 +91,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/Client%20service/Diploma%20atencion%20cliente.pdf",
       tags: ["Customer Service"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "How to Handle Difficult Conversations",
@@ -122,8 +100,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/Client%20service/Diploma%20como%20manejar%20conversaciones%20dificiles.pdf",
       tags: ["Customer Service", "Communication"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "API Development with .NET",
@@ -132,8 +108,6 @@ const certificationSection = {
         "Backend certification centered on REST API design and implementation with .NET.",
       fileUrl: "/documents/academic/Platzi/IT/Diploma%20API%20NET.pdf",
       tags: ["Backend", "IT", ".NET"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Web Applications with Blazor WebAssembly and .NET",
@@ -143,8 +117,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20aplicaciones%20web%20con%20Blazor%20WebAssembly%20y%20NET.pdf",
       tags: ["Frontend", "IT", ".NET"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Azure DevOps CI/CD Flows",
@@ -154,8 +126,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20azure%20devops-%20flujos%20de%20CI-CD.pdf",
       tags: ["DevOps", "Automation", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Flutter Course",
@@ -165,8 +135,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20Curso%20de%20Flutter.pdf",
       tags: ["Frontend", "IT", "Mobile"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Docker",
@@ -175,8 +143,6 @@ const certificationSection = {
         "Containerization certification covering Docker concepts and practical usage.",
       fileUrl: "/documents/academic/Platzi/IT/Diploma%20Docker.pdf",
       tags: ["DevOps", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "N8N Low-Code",
@@ -186,8 +152,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20N8N%20lowcode.pdf",
       tags: ["Automation", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "N8N Professional",
@@ -197,8 +161,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20N8N%20profesional.pdf",
       tags: ["Automation", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "N8N Self-Hosted for Companies",
@@ -208,8 +170,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20N8N%20Self-Hosted%20para%20empresas.pdf",
       tags: ["Automation", "DevOps", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Programming Basics",
@@ -219,8 +179,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20programaci%C3%B3n%20basica.pdf",
       tags: ["Basics", "IT"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     },
     {
       title: "Scrum Fundamentals",
@@ -230,8 +188,6 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Scrum%20Academy/ScrumFundamentalsCertified.pdf",
       tags: ["Scrum", "Agile"],
-      image: certificationLogo,
-      imageAlt: "Certification preview"
     }
   ],
   display: true

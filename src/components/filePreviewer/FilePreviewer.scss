@@ -1,0 +1,20 @@
+.file-previewer {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+.file-previewer-pdf {
+  min-height: 180px;
+  background: #fff;
+}
+
+.file-previewer-image {
+  object-fit: contain;
+}
+
+.file-previewer-fallback {
+  color: inherit;
+  font-weight: 700;
+  text-align: center;
+}

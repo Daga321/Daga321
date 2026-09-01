@@ -1,5 +1,6 @@
 import React from "react";
 import "./CertificationCard.scss";
+import FilePreviewer from "../filePreviewer/FilePreviewer";
 
 export default function CertificationCard({certification, isDark}) {
   const openCertificate = () => {
@@ -13,11 +14,12 @@ export default function CertificationCard({certification, isDark}) {
       }
     >
       <div className="certification-preview-div">
-        <img
-          src={certification.image}
-          alt={certification.imageAlt || certification.title}
-          className="certification-preview-image"
-          loading="lazy"
+        <FilePreviewer
+          src={certification.fileUrl}
+          alt={`${certification.title} certificate preview`}
+          fileType={certification.fileType}
+          width="100%"
+          height="100%"
         />
       </div>
 
