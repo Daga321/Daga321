@@ -29,6 +29,36 @@
   max-width: 210px;
 }
 
+.file-previewer-failed {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $subTitle;
+  font-size: clamp(3rem, 8vw, 5rem);
+  z-index: 2;
+}
+
+.file-previewer-failed i {
+  font-size: clamp(3rem, 8vw, 5rem);
+}
+
+.file-previewer-failed span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 1.25em 0 0 -0.7em;
+  border-radius: 50%;
+  background: $buttonColor;
+  color: $lightBackground3;
+  font-family: Montserrat, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
 .file-previewer-pdf {
   background: $lightBackground3;
   overflow: hidden;
@@ -38,6 +68,10 @@
 .dark-mode .file-previewer-loading,
 .dark-mode .file-previewer-pdf {
   background: #282828;
+}
+
+.dark-mode .file-previewer-failed {
+  color: $textColorDark;
 }
 
 .file-previewer-image {

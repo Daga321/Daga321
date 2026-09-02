@@ -3,6 +3,8 @@ import "./FilePreviewer.scss";
 import DisplayLottie from "../displayLottie/DisplayLottie";
 import {splashScreen} from "../../portfolio";
 
+const PREVIEW_TIMEOUT = 8000;
+
 function getFileType(src, fileType) {
   if (fileType) {
     return fileType.toLowerCase();
@@ -24,6 +26,8 @@ export default function FilePreviewer({
   const previewRef = useRef(null);
   const [isNearViewport, setIsNearViewport] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isFileValid, setIsFileValid] = useState(null);
+  const [hasTimedOut, setHasTimedOut] = useState(false);
   const dimensions = {width, height};
 
   useEffect(() => {
@@ -48,8 +52,68 @@ export default function FilePreviewer({
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const supportedTypes = [
+      "pdf",
+      "jpg",
+      "jpeg",
+      "png",
+      "gif",
+      "webp",
+      "svg"
+    ];
+
+    if (!isNearViewport || !supportedTypes.includes(type)) {
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    const validateFile = async () => {
+      try {
+        const response = await fetch(src, {method: "HEAD", cache: "no-store"});
+        const contentType = response.headers.get("content-type") || "";
+        const isHtmlResponse = contentType.includes("text/html");
+        const isExpectedType =
+          type === "pdf"
+            ? contentType.includes("application/pdf") ||
+              contentType.includes("application/octet-stream") ||
+              contentType === ""
+            : contentType.startsWith("image/") || contentType === "";
+
+        if (!cancelled) {
+          setIsFileValid(response.ok && !isHtmlResponse && isExpectedType);
+        }
+      } catch {
+        if (!cancelled) {
+          setIsFileValid(false);
+        }
+      }
+    };
+
+    validateFile();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [isNearViewport, src, type]);
+
+  useEffect(() => {
+    if (!isNearViewport || isLoaded || hasTimedOut) {
+      return undefined;
+    }
+
+    const timeout = window.setTimeout(() => {
+      setHasTimedOut(true);
+    }, PREVIEW_TIMEOUT);
+
+    return () => window.clearTimeout(timeout);
+  }, [isNearViewport, isLoaded, hasTimedOut, isFileValid]);
+
   const handleLoaded = () => setIsLoaded(true);
-  const showLoading = !isNearViewport || !isLoaded;
+  const handleLoadError = () => setHasTimedOut(true);
+  const showLoading =
+    !hasTimedOut && (!isNearViewport || isFileValid !== true || !isLoaded);
 
   const loadingPreview = showLoading ? (
     <div className="file-previewer-loading" aria-label="Loading file preview">
@@ -58,17 +122,29 @@ export default function FilePreviewer({
       </div>
     </div>
   ) : null;
+  const failedPreview = hasTimedOut ? (
+    <div
+      className="file-previewer-failed"
+      title="The file preview could not be loaded"
+      aria-label="The file preview could not be loaded"
+    >
+      <i className="fas fa-file-alt" aria-hidden="true"></i>
+      <span aria-hidden="true">?</span>
+    </div>
+  ) : null;
 
   if (type === "pdf") {
     return (
       <div ref={previewRef} className="file-previewer-frame" style={dimensions}>
         {loadingPreview}
-        {isNearViewport ? (
+        {failedPreview}
+        {isNearViewport && isFileValid === true ? (
           <iframe
             className="file-previewer file-previewer-pdf"
             src={`${src}#toolbar=0&navpanes=0&view=Fit`}
             title={alt}
             onLoad={handleLoaded}
+            onError={handleLoadError}
             scrolling="no"
           />
         ) : null}
@@ -80,12 +156,14 @@ export default function FilePreviewer({
     return (
       <div ref={previewRef} className="file-previewer-frame" style={dimensions}>
         {loadingPreview}
-        {isNearViewport ? (
+        {failedPreview}
+        {isNearViewport && isFileValid === true ? (
           <img
             className="file-previewer file-previewer-image"
             src={src}
             alt={alt}
             onLoad={handleLoaded}
+            onError={handleLoadError}
             loading="lazy"
           />
         ) : null}
