@@ -3,10 +3,6 @@ import "./CertificationCard.scss";
 import FilePreviewer from "../filePreviewer/FilePreviewer";
 
 export default function CertificationCard({certification, isDark}) {
-  const openCertificate = () => {
-    window.open(encodeURI(certification.fileUrl), "_blank", "noopener,noreferrer");
-  };
-
   return (
     <article
       className={
@@ -45,13 +41,14 @@ export default function CertificationCard({certification, isDark}) {
           ))}
         </div>
 
-        <button
-          type="button"
+        <a
+          href={certification.fileUrl}
           className="certification-action"
-          onClick={openCertificate}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           View certificate
-        </button>
+        </a>
       </div>
     </article>
   );
