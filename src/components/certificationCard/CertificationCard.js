@@ -17,7 +17,6 @@ export default function CertificationCard({
         <FilePreviewer
           src={certification.fileUrl}
           alt={`${certification.title} certificate preview`}
-          fileType={certification.fileType}
           width="100%"
           height="100%"
         />

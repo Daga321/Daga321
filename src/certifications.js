@@ -15,7 +15,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: "2026-07-01",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Flutter Course",
@@ -26,10 +25,10 @@ const certificationSection = {
         "/documents/academic/Platzi/IT/Diploma%20Curso%20de%20Flutter.pdf",
       tags: ["Frontend", "IT", "Mobile"],
       verificationCode: "3f1e07fd-a5f84270&ff918da8727dd4",
-      verificationUrl: null,
-      issuedDate: "2026-07-01",
+      courseDuration: "18", //hours,
+      verificationUrl: "https://platzi.com/p/daniel.gomez7858/curso/11256-flutter/diploma/detalle",
+      issuedDate: "2026-07-18",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "N8N Self-Hosted for Companies",
@@ -40,24 +39,10 @@ const certificationSection = {
         "/documents/academic/Platzi/IT/Diploma%20N8N%20Self-Hosted%20para%20empresas.pdf",
       tags: ["Automation", "DevOps", "IT"],
       verificationCode: "09d1b201-d56e-46d7-a89b-f1b87bd2de19",
-      verificationUrl: null,
-      issuedDate: "2026-07-01",
+      verificationUrl: "https://platzi.com/p/daniel.gomez7858/curso/12255-n8n-selfhosted/diploma/detalle",
+      courseDuration: "6", //hours,
+      issuedDate: "2026-07-10",
       expirationDate: null,
-      fileType: "pdf"
-    },
-    {
-      title: "Low-Code Automations with N8N",
-      issuer: "Platzi",
-      summary:
-        "Automation certification centered on low-code workflows and process orchestration with N8N.",
-      fileUrl:
-        "/documents/academic/Platzi/IT/Diploma%20N8N%20lowcode.pdf",
-      tags: ["Automation", "IT"],
-      verificationCode: "4619dbf4-12fc-4652-89e1-5af7ef01796e",
-      verificationUrl: null,
-      issuedDate: "2026-05-01",
-      expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Professional Workflows with N8N",
@@ -68,10 +53,24 @@ const certificationSection = {
         "/documents/academic/Platzi/IT/Diploma%20N8N%20profesional.pdf",
       tags: ["Automation", "IT"],
       verificationCode: "c26a7aaa-6bd4-4d5e-80dc-2b5dabOc19ee",
-      verificationUrl: null,
-      issuedDate: "2026-05-01",
+      verificationUrl: "https://platzi.com/p/daniel.gomez7858/curso/12250-n8n-profesional/diploma/detalle",
+      courseDuration: "10", //hours,
+      issuedDate: "2026-05-26",
       expirationDate: null,
-      fileType: "pdf"
+    },
+    {
+      title: "Low-Code Automations with N8N",
+      issuer: "Platzi",
+      summary:
+        "Automation certification centered on low-code workflows and process orchestration with N8N.",
+      fileUrl:
+        "/documents/academic/Platzi/IT/Diploma%20N8N%20lowcode.pdf",
+      tags: ["Automation", "IT"],
+      verificationCode: "4619dbf4-12fc-4652-89e1-5af7ef01796e",
+      verificationUrl: "https://platzi.com/p/daniel.gomez7858/curso/12245-n8n-lowcode/diploma/detalle",
+      courseDuration: "7", //hours,
+      issuedDate: "2026-05-16",
+      expirationDate: null,
     },
     {
       title: "Artificial Intelligence - Basic Level",
@@ -85,7 +84,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: "2025-10-01",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "GitHub Foundations Bootcamp",
@@ -99,7 +97,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: "2025-06-01",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "GitHub Foundations",
@@ -112,7 +109,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: "2025-06-01",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "GitHub Actions Course",
@@ -126,7 +122,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: "2025-05-01",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Visual Studio Code and GitHub Copilot Course",
@@ -140,7 +135,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: "2025-05-01",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Customer Service",
@@ -151,10 +145,10 @@ const certificationSection = {
         "/documents/academic/Platzi/Client%20service/Diploma%20atencion%20cliente.pdf",
       tags: ["Customer Service"],
       verificationCode: "7fe0755c-202a-4a29-81da-e0350b96fc5c",
-      verificationUrl: null,
-      issuedDate: "2024-12-01",
+      verificationUrl: "https://platzi.com/p/dgomez6844/curso/4462-atencion-cliente/diploma/detalle",
+      courseDuration: "15", //hours,
+      issuedDate: "2024-12-10",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "How to Handle Difficult Conversations",
@@ -165,10 +159,10 @@ const certificationSection = {
         "/documents/academic/Platzi/Client%20service/Diploma%20como%20manejar%20conversaciones%20dificiles.pdf",
       tags: ["Customer Service", "Communication"],
       verificationCode: "55de549f-f5a1-442f-92af-c3ed32a32f94",
-      verificationUrl: null,
-      issuedDate: "2024-12-01",
+      verificationUrl: "https://platzi.com/p/dgomez6844/curso/2566-manejar-conversaciones-dificiles/diploma/detalle",
+      courseDuration: "5", //hours,
+      issuedDate: "2024-12-03",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Customer Service and User Support",
@@ -179,23 +173,23 @@ const certificationSection = {
         "/documents/academic/Platzi/Client%20service/Diploma%20atencion%20al%20cliente%20y%20soporte%20a%20usuarios.pdf",
       tags: ["Customer Service", "Support"],
       verificationCode: "cd30502e-e7bb-46c4-acf5-07bb814b989d",
-      verificationUrl: null,
-      issuedDate: "2024-11-01",
+      verificationUrl: "https://platzi.com/p/dgomez6844/curso/1282-soporte-usuarios/diploma/detalle",
+      courseDuration: "4", //hours,
+      issuedDate: "2024-11-25",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
-      title: "APIs with .NET",
+      title: "Docker: Fundamentals",
       issuer: "Platzi",
       summary:
-        "Backend certification centered on REST API design and implementation with .NET.",
-      fileUrl: "/documents/academic/Platzi/IT/Diploma%20API%20NET.pdf",
-      tags: ["Backend", "IT", ".NET"],
-      verificationCode: "23bc0a6a-8100-44e3-9ada-268899b8afc4",
-      verificationUrl: null,
-      issuedDate: "2024-10-01",
+        "Containerization certification covering Docker concepts and practical usage.",
+      fileUrl: "/documents/academic/Platzi/IT/Diploma%20Docker.pdf",
+      tags: ["DevOps", "IT"],
+      verificationCode: "c0f2826a-5b32-4a84-9b09-f3f4da67ed92",
+      verificationUrl: "https://platzi.com/p/dgomez6844/curso/8781-docker-fundamentos/diploma/detalle",
+      courseDuration: "14", //hours,
+      issuedDate: "2024-10-31",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Web Applications with Blazor WebAssembly and .NET",
@@ -206,10 +200,23 @@ const certificationSection = {
         "/documents/academic/Platzi/IT/Diploma%20aplicaciones%20web%20con%20Blazor%20WebAssembly%20y%20NET.pdf",
       tags: ["Frontend", "IT", ".NET"],
       verificationCode: "8a22fc6a-3973-4e88-963d-0d75757eb6b7",
-      verificationUrl: null,
-      issuedDate: "2024-10-01",
+      verificationUrl: "https://platzi.com/p/dgomez6844/curso/5382-blazor-webassembly/diploma/detalle",
+      courseDuration: "13", //hours,
+      issuedDate: "2024-10-30",
       expirationDate: null,
-      fileType: "pdf"
+    },
+    {
+      title: "APIs with .NET",
+      issuer: "Platzi",
+      summary:
+        "Backend certification centered on REST API design and implementation with .NET.",
+      fileUrl: "/documents/academic/Platzi/IT/Diploma%20API%20NET.pdf",
+      tags: ["Backend", "IT", ".NET"],
+      verificationCode: "23bc0a6a-8100-44e3-9ada-268899b8afc4",
+      verificationUrl: "https://platzi.com/p/dgomez6844/curso/2983-apis-net/diploma/detalle",
+      courseDuration: "13", //hours,
+      issuedDate: "2024-10-22",
+      expirationDate: null,
     },
     {
       title: "Azure DevOps CI/CD Workflows",
@@ -220,23 +227,10 @@ const certificationSection = {
         "/documents/academic/Platzi/IT/Diploma%20azure%20devops-%20flujos%20de%20CI-CD.pdf",
       tags: ["DevOps", "Automation", "IT"],
       verificationCode: "380e2863-1238-4988-a643-9c407076e9a0",
-      verificationUrl: null,
-      issuedDate: "2024-10-01",
+      courseDuration: "13", //hours,
+      verificationUrl: "https://platzi.com/p/dgomez6844/curso/3275-azure-devops/diploma/detalle",
+      issuedDate: "2024-10-18",
       expirationDate: null,
-      fileType: "pdf"
-    },
-    {
-      title: "Docker: Fundamentals",
-      issuer: "Platzi",
-      summary:
-        "Containerization certification covering Docker concepts and practical usage.",
-      fileUrl: "/documents/academic/Platzi/IT/Diploma%20Docker.pdf",
-      tags: ["DevOps", "IT"],
-      verificationCode: "c0f2826a-5b32-4a84-9b09-f3f4da67ed92",
-      verificationUrl: null,
-      issuedDate: "2024-10-01",
-      expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Scrum Fundamentals Certified (SFC)",
@@ -250,7 +244,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: "2023-07-01",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Data Analytics Fundamentals",
@@ -274,11 +267,11 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Mintic/Formacion%20basica%20en%20habilidades%20de%20programacion%20Mision%20TIC%202022.pdf",
       tags: ["Basics", "IT"],
-      verificationCode: null,
-      verificationUrl: null,
-      issuedDate: "2021-12-01",
+      verificationCode: "IQ681L9O0ZS7Z",
+      verificationUrl: "https://hermesextension.unal.edu.co/ords/f?p=116:17",
+      courseDuration: "600", //hours,
+      issuedDate: "2021-12-28",
       expirationDate: null,
-      fileType: "pdf"
     },
     {
       title: "Programming Fundamentals",
@@ -292,7 +285,6 @@ const certificationSection = {
       verificationUrl: null,
       issuedDate: null,
       expirationDate: null,
-      fileType: "pdf"
     }
   ],
   display: true

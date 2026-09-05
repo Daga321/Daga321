@@ -8,11 +8,7 @@ import {splashScreen} from "../../portfolio";
 const PREVIEW_TIMEOUT = 8000;
 GlobalWorkerOptions.workerSrc = pdfWorker;
 
-function getFileType(src, fileType) {
-  if (fileType) {
-    return fileType.toLowerCase();
-  }
-
+function getFileType(src) {
   const cleanSrc = src.split(/[?#]/)[0];
   const extension = cleanSrc.split(".").pop();
   return extension ? extension.toLowerCase() : "";
@@ -127,11 +123,10 @@ function PdfPreview({src, alt, width, height}) {
 export default function FilePreviewer({
   src,
   alt = "File preview",
-  fileType,
   width = "100%",
   height = "100%"
 }) {
-  const type = getFileType(src, fileType);
+  const type = getFileType(src);
   const previewRef = useRef(null);
   const [isNearViewport, setIsNearViewport] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);

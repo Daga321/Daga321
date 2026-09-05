@@ -31,6 +31,7 @@ export default function CertificationDetails({certification, isDark, onClose}) {
   const detailTags = certification.tags || [];
   const hasVerification = certification.verificationCode || verificationUrl;
   const hasExpirationDate = Boolean(expirationDate);
+  const courseDuration = certification.courseDuration;
 
   return (
     <div className={isDark ? "dark-mode certification-details-overlay" : "certification-details-overlay"}>
@@ -56,7 +57,6 @@ export default function CertificationDetails({certification, isDark, onClose}) {
             <FilePreviewer
               src={certification.fileUrl}
               alt={`${certification.title} certificate preview`}
-              fileType={certification.fileType}
               width="100%"
               height="100%"
             />
@@ -125,6 +125,12 @@ export default function CertificationDetails({certification, isDark, onClose}) {
                       </a>
                     ) : null}
                   </div>
+                </div>
+              ) : null}
+              {courseDuration ? (
+                <div className="certification-detail-fact">
+                  <span className="fact-label">Course duration</span>
+                  <strong>{courseDuration} hours</strong>
                 </div>
               ) : null}
             </div>
