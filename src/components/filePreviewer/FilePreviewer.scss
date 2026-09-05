@@ -64,6 +64,26 @@
   overflow: hidden;
 }
 
+.file-previewer-pdf-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.file-previewer-pdf-canvas-element {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  opacity: 0;
+}
+
+.file-previewer-pdf-canvas-element.file-previewer {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+}
+
 .dark-mode .file-previewer-frame,
 .dark-mode .file-previewer-loading,
 .dark-mode .file-previewer-pdf {

@@ -1,9 +1,12 @@
 import React, {useEffect, useRef, useState} from "react";
+import {getDocument, GlobalWorkerOptions} from "pdfjs-dist";
+import pdfWorker from "pdfjs-dist/build/pdf.worker.entry";
 import "./FilePreviewer.scss";
 import DisplayLottie from "../displayLottie/DisplayLottie";
 import {splashScreen} from "../../portfolio";
 
 const PREVIEW_TIMEOUT = 8000;
+GlobalWorkerOptions.workerSrc = pdfWorker;
 
 function getFileType(src, fileType) {
   if (fileType) {
@@ -13,6 +16,112 @@ function getFileType(src, fileType) {
   const cleanSrc = src.split(/[?#]/)[0];
   const extension = cleanSrc.split(".").pop();
   return extension ? extension.toLowerCase() : "";
+}
+
+function PdfPreview({src, alt, width, height}) {
+  const previewRef = useRef(null);
+  const canvasRef = useRef(null);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasFailed, setHasFailed] = useState(false);
+
+  useEffect(() => {
+    const preview = previewRef.current;
+
+    if (!preview || !("IntersectionObserver" in window)) {
+      setIsNearViewport(true);
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      {rootMargin: "200px 0px"}
+    );
+
+    observer.observe(preview);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isNearViewport || !canvasRef.current) {
+      return undefined;
+    }
+
+    let cancelled = false;
+    let loadingTask;
+
+    const renderPdf = async () => {
+      try {
+        loadingTask = getDocument(src);
+        const pdf = await loadingTask.promise;
+        const page = await pdf.getPage(1);
+        const viewport = page.getViewport({scale: 1.5});
+        const canvas = canvasRef.current;
+
+        if (!canvas || cancelled) {
+          return;
+        }
+
+        const context = canvas.getContext("2d");
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        await page.render({canvasContext: context, viewport}).promise;
+
+        if (!cancelled) {
+          setIsLoaded(true);
+        }
+      } catch {
+        if (!cancelled) {
+          setHasFailed(true);
+        }
+      }
+    };
+
+    renderPdf();
+
+    return () => {
+      cancelled = true;
+      if (loadingTask) {
+        loadingTask.destroy();
+      }
+    };
+  }, [isNearViewport, src]);
+
+  return (
+    <div
+      ref={previewRef}
+      className="file-previewer-frame file-previewer-pdf-canvas"
+      style={{width, height}}
+    >
+      {!isLoaded && !hasFailed ? (
+        <div className="file-previewer-loading" aria-label="Loading file preview">
+          <div className="file-previewer-loading-animation">
+            <DisplayLottie animationData={splashScreen.animation} />
+          </div>
+        </div>
+      ) : null}
+      {hasFailed ? (
+        <div
+          className="file-previewer-failed"
+          title="The file preview could not be loaded"
+          aria-label="The file preview could not be loaded"
+        >
+          <i className="fas fa-file-alt" aria-hidden="true"></i>
+          <span aria-hidden="true">?</span>
+        </div>
+      ) : null}
+      <canvas
+        ref={canvasRef}
+        className={isLoaded ? "file-previewer file-previewer-pdf-canvas-element" : "file-previewer-pdf-canvas-element"}
+        aria-label={alt}
+      />
+    </div>
+  );
 }
 
 export default function FilePreviewer({
@@ -63,7 +172,11 @@ export default function FilePreviewer({
       "svg"
     ];
 
-    if (!isNearViewport || !supportedTypes.includes(type)) {
+    if (
+      !isNearViewport ||
+      type === "pdf" ||
+      !supportedTypes.includes(type)
+    ) {
       return undefined;
     }
 
@@ -99,7 +212,7 @@ export default function FilePreviewer({
   }, [isNearViewport, src, type]);
 
   useEffect(() => {
-    if (!isNearViewport || isLoaded || hasTimedOut) {
+    if (!isNearViewport || type === "pdf" || isLoaded || hasTimedOut) {
       return undefined;
     }
 
@@ -108,12 +221,18 @@ export default function FilePreviewer({
     }, PREVIEW_TIMEOUT);
 
     return () => window.clearTimeout(timeout);
-  }, [isNearViewport, isLoaded, hasTimedOut, isFileValid]);
+  }, [isNearViewport, type, isLoaded, hasTimedOut, isFileValid]);
 
   const handleLoaded = () => setIsLoaded(true);
   const handleLoadError = () => setHasTimedOut(true);
   const showLoading =
     !hasTimedOut && (!isNearViewport || isFileValid !== true || !isLoaded);
+
+  if (type === "pdf") {
+    return (
+      <PdfPreview src={src} alt={alt} width={width} height={height} />
+    );
+  }
 
   const loadingPreview = showLoading ? (
     <div className="file-previewer-loading" aria-label="Loading file preview">
@@ -132,25 +251,6 @@ export default function FilePreviewer({
       <span aria-hidden="true">?</span>
     </div>
   ) : null;
-
-  if (type === "pdf") {
-    return (
-      <div ref={previewRef} className="file-previewer-frame" style={dimensions}>
-        {loadingPreview}
-        {failedPreview}
-        {isNearViewport && isFileValid === true ? (
-          <iframe
-            className="file-previewer file-previewer-pdf"
-            src={`${src}#toolbar=0&navpanes=0&view=Fit`}
-            title={alt}
-            onLoad={handleLoaded}
-            onError={handleLoadError}
-            scrolling="no"
-          />
-        ) : null}
-      </div>
-    );
-  }
 
   if (["jpg", "jpeg", "png", "gif", "webp", "svg"].includes(type)) {
     return (
