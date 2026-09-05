@@ -1,0 +1,371 @@
+@import "../../_globalColor";
+
+.certification-details-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.certification-details-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.certification-details-panel {
+  position: relative;
+  z-index: 1;
+  width: min(1200px, 100%);
+  max-height: min(88vh, 920px);
+  display: flex;
+  flex-direction: column;
+  background: $lightBackground1;
+  border: 1px solid $lightBorder1;
+  border-radius: 24px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: certificationDetailsIn 0.28s ease;
+}
+
+@keyframes certificationDetailsIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.certification-details-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.certification-details-kicker {
+  margin: 0 0 0.4rem;
+  color: $subTitle;
+  font-size: 0.76rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.certification-details-header h2 {
+  margin: 0;
+  font-size: clamp(1.6rem, 2.8vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.certification-details-close {
+  appearance: none;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background: rgba(0, 0, 0, 0.04);
+  color: $titleColor;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.certification-details-close:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+
+.certification-details-close:focus-visible {
+  outline: 3px solid rgba(23, 101, 56, 0.3);
+  outline-offset: 2px;
+}
+
+.certification-details-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.9fr);
+  gap: 1.25rem;
+  padding: 1.25rem 1.75rem 1.75rem;
+  overflow: auto;
+}
+
+.certification-details-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.certification-details-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.certification-details-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.15rem;
+}
+
+.certification-details-issuer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.35rem;
+  max-width: 100%;
+  padding: 0.55rem 0.8rem 0.55rem 2.35rem;
+  border: 1px solid rgba(23, 101, 56, 0.2);
+  border-left: 3px solid $buttonColor;
+  border-radius: 5px 10px 10px 5px;
+  background: linear-gradient(
+    110deg,
+    rgba(23, 101, 56, 0.11),
+    rgba(23, 101, 56, 0.03)
+  );
+  color: $titleColor;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.certification-details-issuer::before {
+  position: absolute;
+  left: 0.7rem;
+  color: $buttonColor;
+  content: "\f559";
+  font-family: "Font Awesome 5 Free";
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.certification-details-summary {
+  margin: 0;
+  color: $cardSubtitle;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.certification-details-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.certification-details-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.05);
+  color: $subTitle;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.certification-details-facts {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.certification-details-dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.certification-details-dates-single {
+  grid-template-columns: 1fr;
+}
+
+.certification-detail-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.fact-label {
+  color: $subTitle;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.certification-detail-fact strong {
+  color: $titleColor;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+.certification-verification-value {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.certification-verification-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  color: $buttonColor;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.certification-verification-link:hover {
+  background: rgba(23, 101, 56, 0.1);
+  transform: translateY(-1px);
+}
+
+.certification-details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.certification-details-primary,
+.certification-details-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0.8rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.certification-details-primary {
+  background: $buttonColor;
+  color: white;
+  box-shadow: 0 8px 20px rgba(23, 101, 56, 0.2);
+}
+
+.certification-details-secondary {
+  background: transparent;
+  color: $titleColor;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.certification-details-primary:hover,
+.certification-details-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.dark-mode.certification-details-overlay .certification-details-panel {
+  background: $darkBackground;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode.certification-details-overlay .certification-details-header,
+.dark-mode.certification-details-overlay .certification-detail-fact,
+.dark-mode.certification-details-overlay .certification-details-secondary {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark-mode.certification-details-overlay .certification-details-header h2,
+.dark-mode.certification-details-overlay .certification-detail-fact strong,
+.dark-mode.certification-details-overlay .certification-details-summary,
+.dark-mode.certification-details-overlay .certification-details-close,
+.dark-mode.certification-details-overlay .certification-details-secondary {
+  color: $textColorDark;
+}
+
+.dark-mode.certification-details-overlay .certification-verification-link {
+  color: $buttonHover;
+}
+
+.dark-mode.certification-details-overlay .certification-details-issuer,
+.dark-mode.certification-details-overlay .certification-details-tag,
+.dark-mode.certification-details-overlay .certification-details-close,
+.dark-mode.certification-details-overlay .certification-detail-fact {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode.certification-details-overlay .certification-details-issuer {
+  border-color: rgba(0, 190, 79, 0.35);
+  border-left-color: $buttonHover;
+  color: $textColorDark;
+}
+
+.dark-mode.certification-details-overlay .certification-details-issuer::before {
+  color: $buttonHover;
+}
+
+.dark-mode.certification-details-overlay .certification-details-preview {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 960px) {
+  .certification-details-body {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-details-preview {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certification-details-overlay {
+    padding: 1rem;
+  }
+
+  .certification-details-header,
+  .certification-details-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .certification-details-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .certification-details-actions {
+    flex-direction: column;
+  }
+
+  .certification-details-dates {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-details-primary,
+  .certification-details-secondary {
+    width: 100%;
+  }
+}

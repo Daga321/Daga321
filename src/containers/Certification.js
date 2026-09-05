@@ -6,6 +6,7 @@ import {certificationSection} from "../certifications";
 import TagFilters from "./tagFilters/TagFilters";
 import Timeline from "./timeline/Timeline";
 import ScrollToTopButton from "./topbutton/Top";
+import CertificationDetails from "../components/certificationDetails/CertificationDetails";
 
 export default function Certification() {
   const {isDark} = useContext(StyleContext);
@@ -14,6 +15,7 @@ export default function Certification() {
     service: "All",
     focus: "All"
   });
+  const [selectedCertification, setSelectedCertification] = useState(null);
 
   const categorizedCertifications = useMemo(() => {
     return certificationSection.certifications.map((certification) => {
@@ -123,10 +125,21 @@ export default function Certification() {
               isDark={isDark}
             />
 
-            <Timeline certifications={filteredCertifications} isDark={isDark} />
+            <Timeline
+              certifications={filteredCertifications}
+              isDark={isDark}
+              onSelectCertification={setSelectedCertification}
+            />
           </div>
         </div>
       </Fade>
+      {selectedCertification ? (
+        <CertificationDetails
+          certification={selectedCertification}
+          isDark={isDark}
+          onClose={() => setSelectedCertification(null)}
+        />
+      ) : null}
       <ScrollToTopButton />
     </>
   );

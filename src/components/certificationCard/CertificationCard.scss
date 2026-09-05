@@ -36,19 +36,33 @@
 }
 
 .certification-meta {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.7rem;
 }
 
 .certification-issuer {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
+  max-width: 100%;
+  padding: 0.55rem 0.8rem 0.55rem 2.25rem;
+  border-left: 3px solid $buttonColor;
+  border-radius: 5px 10px 10px 5px;
+  background: rgba(23, 101, 56, 0.08);
+  color: $titleColor;
   font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.05);
-  color: $subTitle;
+  line-height: 1.2;
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.certification-issuer::before {
+  position: absolute;
+  left: 0.7rem;
+  color: $buttonColor;
+  content: "\f559";
+  font-family: "Font Awesome 5 Free";
+  font-size: 0.85rem;
+  font-weight: 900;
 }
 
 .certification-title {
@@ -113,6 +127,14 @@
 .dark-mode .certification-tag {
   background: rgba(255, 255, 255, 0.08);
   color: $textColorDark;
+}
+
+.dark-mode .certification-issuer {
+  border-left-color: $buttonHover;
+}
+
+.dark-mode .certification-issuer::before {
+  color: $buttonHover;
 }
 
 .dark-mode .certification-title,

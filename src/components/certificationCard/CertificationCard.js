@@ -2,7 +2,11 @@ import React from "react";
 import "./CertificationCard.scss";
 import FilePreviewer from "../filePreviewer/FilePreviewer";
 
-export default function CertificationCard({certification, isDark}) {
+export default function CertificationCard({
+  certification,
+  isDark,
+  onSelectCertification
+}) {
   return (
     <article
       className={
@@ -41,14 +45,13 @@ export default function CertificationCard({certification, isDark}) {
           ))}
         </div>
 
-        <a
-          href={certification.fileUrl}
+        <button
+          type="button"
           className="certification-action"
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={() => onSelectCertification(certification)}
         >
           View certificate
-        </a>
+        </button>
       </div>
     </article>
   );

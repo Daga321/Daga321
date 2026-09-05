@@ -3,7 +3,7 @@ import "./Timeline.scss";
 import CertificationCard from "../../components/certificationCard/CertificationCard";
 import TimelineDot from "../../components/timelineDot/TimelineDot";
 
-export default function Timeline({certifications, isDark}) {
+export default function Timeline({certifications, isDark, onSelectCertification}) {
   if (!certifications.length) {
     return (
       <div className={isDark ? "dark-mode timeline-empty" : "timeline-empty"}>
@@ -23,7 +23,11 @@ export default function Timeline({certifications, isDark}) {
               <TimelineDot isDark={isDark} isLast={isLast} />
             </div>
             <div className="timeline-content">
-              <CertificationCard certification={certification} isDark={isDark} />
+              <CertificationCard
+                certification={certification}
+                isDark={isDark}
+                onSelectCertification={onSelectCertification}
+              />
             </div>
           </div>
         );
