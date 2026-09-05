@@ -1,4 +1,6 @@
 import React, {useContext, useMemo, useState} from "react";
+import {useEffect} from "react";
+import {useHistory, useLocation} from "react-router-dom";
 import "./Certification.scss";
 import {Fade} from "react-reveal";
 import StyleContext from "../contexts/StyleContext";
@@ -8,12 +10,44 @@ import Timeline from "./timeline/Timeline";
 import ScrollToTopButton from "./topbutton/Top";
 import CertificationDetails from "../components/certificationDetails/CertificationDetails";
 
+function readCertificationQuery(search) {
+  const params = new URLSearchParams(search);
+
+  return {
+    issuer: params.get("issuer") || "All",
+    service: params.get("service") || "All",
+    focus: params.get("focus") || "All",
+    certification: params.get("certification") || ""
+  };
+}
+
+function updateCertificationQuery(history, search, values) {
+  const params = new URLSearchParams(search);
+
+  Object.entries(values).forEach(([key, value]) => {
+    if (!value || value === "All") {
+      params.delete(key);
+    } else {
+      params.set(key, value);
+    }
+  });
+
+  const query = params.toString();
+  history.replace({
+    pathname: "/certifications",
+    search: query ? `?${query}` : ""
+  });
+}
+
 export default function Certification() {
   const {isDark} = useContext(StyleContext);
+  const history = useHistory();
+  const location = useLocation();
+  const initialQuery = readCertificationQuery(location.search);
   const [activeFilters, setActiveFilters] = useState({
-    issuer: "All",
-    service: "All",
-    focus: "All"
+    issuer: initialQuery.issuer,
+    service: initialQuery.service,
+    focus: initialQuery.focus
   });
   const [selectedCertification, setSelectedCertification] = useState(null);
 
@@ -74,16 +108,64 @@ export default function Certification() {
     });
   }, [activeFilters, categorizedCertifications]);
 
+  useEffect(() => {
+    const query = readCertificationQuery(location.search);
+    const validServices = new Set(
+      categorizedCertifications.map((certification) => certification.service)
+    );
+    const service = validServices.has(query.service) ? query.service : "All";
+    const validIssuers = new Set(
+      categorizedCertifications.map((certification) => certification.issuer)
+    );
+    const issuer = validIssuers.has(query.issuer) ? query.issuer : "All";
+    const validFocus = new Set(
+      categorizedCertifications
+        .filter(
+          (certification) => service === "All" || certification.service === service
+        )
+        .flatMap((certification) => certification.focus)
+    );
+    const focus = validFocus.has(query.focus) ? query.focus : "All";
+
+    setActiveFilters({issuer, service, focus});
+
+    const certification = categorizedCertifications.find(
+      (item) => item.title === query.certification
+    );
+    setSelectedCertification(certification || null);
+  }, [categorizedCertifications, location.search]);
+
   const updateFilter = (filterName, value) => {
-    setActiveFilters((currentFilters) => ({
-      ...currentFilters,
-      [filterName]: value,
-      ...(filterName === "service" ? {focus: "All"} : {})
-    }));
+    setActiveFilters((currentFilters) => {
+      const nextFilters = {
+        ...currentFilters,
+        [filterName]: value,
+        ...(filterName === "service" ? {focus: "All"} : {})
+      };
+      updateCertificationQuery(history, location.search, nextFilters);
+      return nextFilters;
+    });
   };
 
   const clearTags = () => {
     setActiveFilters({issuer: "All", service: "All", focus: "All"});
+    updateCertificationQuery(history, location.search, {
+      issuer: "All",
+      service: "All",
+      focus: "All"
+    });
+  };
+
+  const selectCertification = (certification) => {
+    setSelectedCertification(certification);
+    updateCertificationQuery(history, location.search, {
+      certification: certification.title
+    });
+  };
+
+  const closeCertificationDetails = () => {
+    setSelectedCertification(null);
+    updateCertificationQuery(history, location.search, {certification: ""});
   };
 
   if (!certificationSection.display) {
@@ -128,7 +210,7 @@ export default function Certification() {
             <Timeline
               certifications={filteredCertifications}
               isDark={isDark}
-              onSelectCertification={setSelectedCertification}
+              onSelectCertification={selectCertification}
             />
           </div>
         </div>
@@ -137,7 +219,7 @@ export default function Certification() {
         <CertificationDetails
           certification={selectedCertification}
           isDark={isDark}
-          onClose={() => setSelectedCertification(null)}
+          onClose={closeCertificationDetails}
         />
       ) : null}
       <ScrollToTopButton />
