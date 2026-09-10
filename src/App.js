@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./App.scss";
 import {
   BrowserRouter,
-  Redirect,
+  Link,
   Route,
   Switch,
   useLocation
@@ -62,6 +62,19 @@ function HashNavigation() {
   }, [location.hash, location.pathname]);
 
   return null;
+}
+
+function NotFound() {
+  return (
+    <section className="not-found" aria-labelledby="not-found-title">
+      <p className="not-found-code">404</p>
+      <h1 id="not-found-title">Page not found</h1>
+      <p>The page you are looking for does not exist.</p>
+      <Link className="not-found-link" to="/">
+        Go back home
+      </Link>
+    </section>
+  );
 }
 
 function App() {
@@ -165,7 +178,7 @@ function App() {
               <Switch>
                 <Route exact path="/" component={Portafolio} />
                 <Route exact path="/certifications" component={Certification} />
-                <Redirect to="/" />
+                <Route component={NotFound} />
               </Switch>
             </main>
             <Footer />

@@ -28,3 +28,31 @@
 .subTitle {
   color: $subTitle;
 }
+
+.not-found {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.not-found-code {
+  color: $appLink;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.not-found h1 {
+  margin: 1rem 0 0.5rem;
+}
+
+.not-found-link {
+  color: $appLink;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
