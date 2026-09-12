@@ -12,8 +12,9 @@ const certificationSection = {
         "/documents/academic/Codigo%20Facilito/Certificado%20-%20Bootcamp%20Desarrollo%20de%20software%20basado%20en%20agentes%20con%20Kiro.pdf",
       tags: ["AI", "DevTools", "Automation"],
       verificationCode: "a1b99848-44bd-4855-ac67-1bd9f55925ed",
-      verificationUrl: null,
-      issuedDate: "2026-07-01",
+      verificationUrl: "https://codigofacilito.com/certificates/a1b99848-44bd-4855-ac67-1bd9f55925ed",
+      courseDuration: "16", //hours
+      issuedDate: "2026-07-26",
       expirationDate: null,
     },
     {
@@ -81,21 +82,9 @@ const certificationSection = {
         "/documents/academic/Mintic/Inteligencia%20Artificial%20Nivel%20B%C3%A1sico.pdf",
       tags: ["AI", "IT"],
       verificationCode: "0x55be53b2ebd95193efa25b8937db4f0395c673a95daa79f4a9d0a714385b1005",
-      verificationUrl: null,
-      issuedDate: "2025-10-01",
-      expirationDate: null,
-    },
-    {
-      title: "GitHub Foundations Bootcamp",
-      issuer: "Código Facilito",
-      summary:
-        "Foundational bootcamp focused on GitHub workflows, collaboration, and core developer tooling.",
-      fileUrl:
-        "/documents/academic/Codigo%20Facilito/Certificado%20bootcamp%20GitHub%20Foundations.pdf",
-      tags: ["GitHub", "DevTools", "Basics"],
-      verificationCode: "03eb6297-4ec6-4895-8713-74f10ff9abee",
-      verificationUrl: null,
-      issuedDate: "2025-06-01",
+      verificationUrl: "https://www.acreditta.com/credential/6b4bfd08-9931-457a-957f-3706cb7669c1",
+      courseDuration: "159", //hours,
+      issuedDate: "2025-10-03",
       expirationDate: null,
     },
     {
@@ -106,8 +95,22 @@ const certificationSection = {
       fileUrl: "/documents/academic/GitHub/Certificado%20GitHub%20Foundations.pdf",
       tags: ["GitHub", "DevTools"],
       verificationCode: "aafd5a1c-7085-4737-a808-2354266b6ed1",
-      verificationUrl: null,
-      issuedDate: "2025-06-01",
+      verificationUrl: "https://www.credly.com/badges/aafd5a1c-7085-4737-a808-2354266b6ed1",
+      issuedDate: "2025-06-09",
+      expirationDate: "2028-06-09",
+    },
+    {
+      title: "GitHub Foundations Bootcamp",
+      issuer: "Código Facilito",
+      summary:
+        "Foundational bootcamp focused on GitHub workflows, collaboration, and core developer tooling.",
+      fileUrl:
+        "/documents/academic/Codigo%20Facilito/Certificado%20bootcamp%20GitHub%20Foundations.pdf",
+      tags: ["GitHub", "DevTools", "Basics"],
+      verificationCode: "03eb6297-4ec6-4895-8713-74f10ff9abee",
+      verificationUrl: "https://codigofacilito.com/certificates/03eb6297-4ec6-4895-8713-74f10ff9abee",
+      courseDuration: "16", //hours
+      issuedDate: "2025-06-06",
       expirationDate: null,
     },
     {
@@ -119,8 +122,9 @@ const certificationSection = {
         "/documents/academic/Codigo%20Facilito/Certificado%20-%20Curso%20de%20GitHub%20Actions.pdf",
       tags: ["GitHub", "DevOps", "Automation"],
       verificationCode: "636195f6-4b62-4524-a560-eed4180e65c7",
-      verificationUrl: null,
-      issuedDate: "2025-05-01",
+      verificationUrl: "https://codigofacilito.com/certificates/636195f6-4b62-4524-a560-eed4180e65c7",
+      courseDuration: "4.6", //hours
+      issuedDate: "2025-05-14",
       expirationDate: null,
     },
     {
@@ -132,8 +136,9 @@ const certificationSection = {
         "/documents/academic/Codigo%20Facilito/Certificado%20-%20Curso%20de%20Visual%20Studio%20Code%20y%20GitHub%20Copilot.pdf",
       tags: ["GitHub", "DevTools", "AI"],
       verificationCode: "a75dde28-3a2a-497c-bf02-060a45c340af",
-      verificationUrl: null,
-      issuedDate: "2025-05-01",
+      verificationUrl: "https://codigofacilito.com/certificates/a75dde28-3a2a-497c-bf02-060a45c340af",
+      courseDuration: "3.3", //hours
+      issuedDate: "2025-05-14",
       expirationDate: null,
     },
     {
@@ -241,8 +246,8 @@ const certificationSection = {
         "/documents/academic/Scrum%20Academy/ScrumFundamentalsCertified.pdf",
       tags: ["Scrum", "Agile"],
       verificationCode: "987780",
-      verificationUrl: null,
-      issuedDate: "2023-07-01",
+      verificationUrl: "https://www.scrumstudy.com/certification/verify?type=SFC&number=987780",
+      issuedDate: "2023-07-09",
       expirationDate: null,
     },
     {
@@ -255,9 +260,8 @@ const certificationSection = {
       tags: ["Data", "IT"],
       verificationCode: null,
       verificationUrl: null,
-      issuedDate: "2022-12-01",
-      expirationDate: null,
-      fileType: "pdf"
+      issuedDate: "2022-12-17",
+      expirationDate: null
     },
     {
       title: "Basic Training in Programming Skills - Mission TIC 2022",
@@ -281,9 +285,10 @@ const certificationSection = {
       fileUrl:
         "/documents/academic/Platzi/IT/Diploma%20programaci%C3%B3n%20basica.pdf",
       tags: ["Basics", "IT"],
-      verificationCode: null,
-      verificationUrl: null,
-      issuedDate: null,
+      verificationCode: "2affaaf5-b8cc-9f1b-459af890a829",
+      verificationUrl: "https://platzi.com/p/Daga3211/curso/3208-course/diploma/detalle/",
+      courseDuration: "29", //hours
+      issuedDate: "2022-09-22",
       expirationDate: null,
     }
   ],

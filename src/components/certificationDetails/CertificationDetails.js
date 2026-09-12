@@ -7,7 +7,9 @@ function formatDate(dateValue) {
     return "—";
   }
 
-  const date = new Date(dateValue);
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(dateValue)
+    ? new Date(`${dateValue}T00:00:00`)
+    : new Date(dateValue);
 
   if (Number.isNaN(date.getTime())) {
     return dateValue;
@@ -25,8 +27,8 @@ export default function CertificationDetails({certification, isDark, onClose}) {
     return null;
   }
 
-  const issueDate = certification.issuedDate || certification.issuedAt;
-  const expirationDate = certification.expirationDate || certification.expiresAt;
+  const issueDate = certification.issuedDate;
+  const expirationDate = certification.expirationDate;
   const verificationUrl = certification.verificationUrl;
   const detailTags = certification.tags || [];
   const hasVerification = certification.verificationCode || verificationUrl;
