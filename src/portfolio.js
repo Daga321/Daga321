@@ -149,6 +149,17 @@ const educationInfo = {
 };
 
 // Work experience section
+// Keep each experience easy to scan: summary explains the role's focus, while
+// highlights lists concrete contributions, outcomes, or responsibilities.
+// Future entries should follow this shape:
+// {
+//   role: "Role title",
+//   company: "Company name",
+//   companylogo: require("./assets/images/company_logo.webp"),
+//   date: "Month Year - Month Year",
+//   summary: "One or two sentences describing the role's main focus.",
+//   highlights: ["Action or outcome", "Action or outcome"]
+// }
 
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
@@ -158,12 +169,12 @@ const workExperiences = {
       company: "ControlBox Corp.",
       companylogo: require("./assets/images/controlbox_logo.webp"),
       date: "Jul 2025 – Current",
-      desc: "I am currently working as a Full Stack Developer, contributing to the continuous improvement of a SaaS platform within the financial services and remittance space. My work involves developing and enhancing features across both administrative and end-user systems, with a focus on scalability, usability, and reliable integrations.",
-      descBullets: [
-        "Continuously improve the UI and UX across both administrative and end-user systems.",
-        "Implement and integrate banking services, international biometric identification solutions, and other third-party APIs into end-to-end workflows.",
-        "Develop, document, and support the implementation of remittance APIs across different systems and business entities, including storage, e-commerce, and other customer-facing solutions.",
-        "Continuously support production deployments, feature releases, and post-release improvements across the platform."
+      summary: "Full Stack Developer improving a SaaS platform for financial services and remittances, with a focus on usability, scalability, and reliable integrations.",
+      highlights: [
+        "Improve UI and UX across administrative and end-user systems.",
+        "Integrate banking, biometric identification, and third-party services into end-to-end workflows.",
+        "Develop and document remittance APIs for storage, e-commerce, and customer-facing solutions.",
+        "Support production deployments, feature releases, and post-release improvements."
       ]
     },
     {
@@ -171,8 +182,8 @@ const workExperiences = {
       company: "Datanalisis de Colombia SAS",
       companylogo: require("./assets/images/Datanalisis_logo.webp"),
       date: "Sep 2024 – Jan 2025",
-      desc: "Developed a centralized gateway module enabling secure extraction of information from microservices, using authentication via JSON Web Tokens, as part of the migration of the company's ERP system. Conducted extensive testing across multiple servers and environments to ensure a robust security system.",
-      descBullets: [
+      summary: "Developed a secure gateway during the company's ERP migration, enabling controlled access to information from multiple microservices.",
+      highlights: [
         "Designed and implemented a secure gateway module",
         "Integrated authentication with JSON Web Tokens",
         "Tested across various servers and environments",
@@ -184,8 +195,8 @@ const workExperiences = {
       company: "Freelancer",
       companylogo: require("./assets/images/Freelancer_logo.webp"),
       date: "Jun 2023 – Aug 2024",
-      desc: "Developed an information system serving as a repository for materials resulting from training sessions provided to the mining sector, under the agreement between UPTC and ANM in Colombia. Contributed significantly to both frontend (Blazor) and backend (REST API with .NET), handled deployments using DevOps practices, and provided ongoing system support.",
-      descBullets: [
+      summary: "Built and supported an information system for training materials delivered to Colombia's mining sector through the UPTC and ANM agreement.",
+      highlights: [
         "Frontend development using Blazor",
         "Backend development with .NET REST APIs",
         "Deployment automation and DevOps",
@@ -197,8 +208,11 @@ const workExperiences = {
       company: "UPTC",
       companylogo: require("./assets/images/UPTC_logo.webp"),
       date: "Jun 2022 – May 2024",
-      desc: "During my final three semesters at university, I worked as a Programming Instructor, supporting students throughout their academic courses. My responsibilities included answering their questions, helping them overcome technical challenges, and strengthening their programming skills across multiple technology stacks, including PHP, virtualization, web development, web services, and RESTful APIs. My main goal was to reinforce their technical foundations and knowledge while helping them improve their overall learning experience and academic performance.",
-      descBullets: [
+      summary: "Supported university students in strengthening their programming foundations and solving technical challenges across multiple technology stacks.",
+      highlights: [
+        "Guided students through PHP, virtualization, web development, web services, and RESTful APIs.",
+        "Answered technical questions and helped resolve course-related challenges.",
+        "Reinforced programming concepts to improve learning outcomes and academic performance."
       ]
     }
   ]

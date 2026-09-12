@@ -92,7 +92,7 @@
 }
 
 .experience-text-role {
-  text-align: center;
+  text-align: left;
   color: $textColor;
   font-weight: 700;
   font-size: 25px;
@@ -104,21 +104,46 @@
   color: $textColorDark !important;
 }
 .experience-text-date {
-  text-align: center;
+  text-align: left;
   color: $textColor;
-  font-size: 20px;
-  margin: 0px;
-  padding-top: 1rem;
-  font-weight: 600;
+  font-size: 15px;
+  margin: 0.35rem 0 1.25rem;
+  padding-top: 0;
+  font-weight: 500;
+  opacity: 0.75;
 }
 
 .experience-text-desc {
-  text-align: center;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 1rem;
 }
 
 .experience-text-details {
   padding: 1.5rem;
   margin-top: 2rem;
+  text-align: left;
+}
+
+.experience-text-highlights-title {
+  margin: 0 0 0.65rem;
+  color: $textColor;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.experience-text-bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.experience-text-bullets li {
+  margin-bottom: 0.55rem;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 /* Media Query */
@@ -132,7 +157,7 @@
     font-size: 22px;
   }
   .experience-text-date {
-    font-size: 18px;
+    font-size: 15px;
   }
   .experience-roundedimg {
     width: 6.5rem;

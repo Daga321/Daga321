@@ -17,12 +17,12 @@ export default function ExperienceCard({cardInfo, isDark}) {
       : "rgb(" + values.join(", ") + ")";
   }
 
-  const GetDescBullets = ({descBullets, isDark}) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
+  const GetDescBullets = ({highlights, isDark}) => {
+    return highlights
+      ? highlights.map((item, i) => (
           <li
             key={i}
-            className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+            className={isDark ? "dark-mode-text" : ""}
           >
             {item}
           </li>
@@ -48,7 +48,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
         />
       </div>
       <div className="experience-text-details">
-        <h5
+        <h3
           className={
             isDark
               ? "experience-text-role dark-mode-text"
@@ -56,8 +56,8 @@ export default function ExperienceCard({cardInfo, isDark}) {
           }
         >
           {cardInfo.role}
-        </h5>
-        <h5
+        </h3>
+        <p
           className={
             isDark
               ? "experience-text-date dark-mode-text"
@@ -65,7 +65,7 @@ export default function ExperienceCard({cardInfo, isDark}) {
           }
         >
           {cardInfo.date}
-        </h5>
+        </p>
         <p
           className={
             isDark
@@ -73,11 +73,24 @@ export default function ExperienceCard({cardInfo, isDark}) {
               : "subTitle experience-text-desc"
           }
         >
-          {cardInfo.desc}
+          {cardInfo.summary}
         </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
+        {cardInfo.highlights?.length ? (
+          <>
+            <h4
+              className={
+                isDark
+                  ? "experience-text-highlights-title dark-mode-text"
+                  : "experience-text-highlights-title"
+              }
+            >
+              Key contributions
+            </h4>
+            <ul className="experience-text-bullets">
+              <GetDescBullets highlights={cardInfo.highlights} isDark={isDark} />
+            </ul>
+          </>
+        ) : null}
       </div>
     </div>
   );
