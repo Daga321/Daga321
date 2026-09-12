@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cee228b.css",
-    "main.js": "/static/js/main.739033ca.js",
+    "main.css": "/static/css/main.65d28b0b.css",
+    "main.js": "/static/js/main.e89a36b8.js",
     "static/css/64.3b010775.chunk.css": "/static/css/64.3b010775.chunk.css",
     "static/js/64.56dc6704.chunk.js": "/static/js/64.56dc6704.chunk.js",
     "static/css/769.5bc05660.chunk.css": "/static/css/769.5bc05660.chunk.css",
@@ -9,28 +9,28 @@
     "static/media/AWS_community_day_logo.webp": "/static/media/AWS_community_day_logo.beca3e7082fef4b0da58.webp",
     "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3cd786652b8a2e9d41f2.ttf",
     "static/media/Certifications_logo.webp": "/static/media/Certifications_logo.445683d444f30943daba.webp",
+    "static/media/UPTC_logo.webp": "/static/media/UPTC_logo.61b2278be954f8e7ef9a.webp",
+    "static/media/controlbox_logo.webp": "/static/media/controlbox_logo.6be48cb75e5c2b8e2510.webp",
     "static/media/Agustina.woff": "/static/media/Agustina.eb0c59dda4cc308cba96.woff",
-    "static/media/Datanalisis_logo.webp": "/static/media/Datanalisis_logo.3f5c96339ebf1ee563dc.webp",
-    "static/media/UPTC_logo.webp": "/static/media/UPTC_logo.3d457aef7b461dcf2fec.webp",
     "static/media/contactMailDark.svg": "/static/media/contactMailDark.1db650d351729a0f17b4e3104e6a7b7a.svg",
-    "static/media/controlbox_logo.webp": "/static/media/controlbox_logo.a2667ad43c1e4a16ce26.webp",
     "static/media/developerActivity.svg": "/static/media/developerActivity.29c4fec095cd10e90a0be2feb394d6e1.svg",
+    "static/media/Datanalisis_logo.webp": "/static/media/Datanalisis_logo.b3049b84e8b3b19fb3e2.webp",
     "static/media/Employee-of-ther-month.webp": "/static/media/Employee-of-ther-month.baabfa25ad5a6c0d273c.webp",
     "static/media/skill.svg": "/static/media/skill.4c716dd4f4cec82d5f3557b8d5161016.svg",
     "static/media/manOnTable.svg": "/static/media/manOnTable.c9e9ba4ec24f829c68609069e77c6a05.svg",
-    "static/media/Freelancer_logo.webp": "/static/media/Freelancer_logo.9c3e5c2322c7b1bf9aee.webp",
+    "static/media/Freelancer_logo.webp": "/static/media/Freelancer_logo.4453591deeb332135ce4.webp",
     "static/media/resume.pdf": "/static/media/resume.f0f733dd3cd732b39262.pdf",
     "index.html": "/index.html",
     "static/media/talksCardBack.svg": "/static/media/talksCardBack.73ed1545d58273ba64b0.svg",
-    "main.2cee228b.css.map": "/static/css/main.2cee228b.css.map",
-    "main.739033ca.js.map": "/static/js/main.739033ca.js.map",
+    "main.65d28b0b.css.map": "/static/css/main.65d28b0b.css.map",
+    "main.e89a36b8.js.map": "/static/js/main.e89a36b8.js.map",
     "64.3b010775.chunk.css.map": "/static/css/64.3b010775.chunk.css.map",
     "64.56dc6704.chunk.js.map": "/static/js/64.56dc6704.chunk.js.map",
     "769.5bc05660.chunk.css.map": "/static/css/769.5bc05660.chunk.css.map",
     "769.bda0d7b7.chunk.js.map": "/static/js/769.bda0d7b7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2cee228b.css",
-    "static/js/main.739033ca.js"
+    "static/css/main.65d28b0b.css",
+    "static/js/main.e89a36b8.js"
   ]
 }
