@@ -5,6 +5,7 @@ import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function Skills() {
   const {isDark} = useContext(StyleContext);
@@ -15,6 +16,30 @@ export default function Skills() {
   return (
     <div className={isDark ? "dark-mode main" : "main"}>
       <div className="skills-main-div">
+        <Fade bottom duration={1000}>
+          <div className="skills-header-div">
+            <h1
+              id="skills"
+              className={
+                isDark
+                  ? "dark-mode skills-heading section-anchor"
+                  : "skills-heading section-anchor"
+              }
+            >
+              {skillsSection.title}
+            </h1>
+            <p
+              className={
+                isDark
+                  ? "dark-mode subTitle skills-text-subtitle"
+                  : "subTitle skills-text-subtitle"
+              }
+            >
+              {skillsSection.subTitle}
+            </p>
+          </div>
+        </Fade>
+
         <Fade left duration={1000}>
           <div className="skills-image-div">
             {illustration.animated ? (
@@ -32,26 +57,6 @@ export default function Skills() {
 
         <Fade right duration={1000}>
           <div className="skills-text-div">
-            <h1
-              id="skills"
-              className={
-                isDark
-                  ? "dark-mode skills-heading section-anchor"
-                  : "skills-heading section-anchor"
-              }
-            >
-              {skillsSection.title}{" "}
-            </h1>
-            <p
-              className={
-                isDark
-                  ? "dark-mode subTitle skills-text-subtitle"
-                  : "subTitle skills-text-subtitle"
-              }
-            >
-              {skillsSection.subTitle}
-            </p>
-
             <div className="skill-groups-grid">
               {skillsSection.skillGroups.map((group, index) => (
                 <div key={index} className="skill-group">
@@ -67,7 +72,16 @@ export default function Skills() {
                           "--skill-dark-color": skill.darkColor || "#9ad4ff"
                         }}
                       >
-                        <i className={skill.icon} />
+                        {skill.iconType === "fontawesome" ? (
+                          <FontAwesomeIcon
+                            icon={skill.icon}
+                            className="skill-icon-glyph"
+                          />
+                        ) : skill.iconType === "devicon" ? (
+                          <i className={`${skill.icon} skill-icon-glyph`} />
+                        ) : (
+                          <i className={`${skill.icon} skill-icon-glyph`} />
+                        )}
                         <span>{skill.name}</span>
                       </div>
                     ))}
