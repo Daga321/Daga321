@@ -3,7 +3,6 @@
 .repo-card-div {
   color: $githubRepoCardColor;
   background-color: $lightBackground2;
-  // box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   padding: 2rem;
   cursor: pointer;
   border-radius: 10px;
@@ -12,6 +11,11 @@
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   min-width: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .repo-card-div:hover {
@@ -29,12 +33,17 @@
   justify-content: space-between;
   font-size: 13px;
   color: $githubRepoCardRepoCardStatsColor;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .repo-left-stat {
   -webkit-box-flex: 1;
   flex-grow: 1;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
 }
 
 .language-color {
@@ -55,6 +64,7 @@
 .repo-name-div {
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .repo-svg {
@@ -96,14 +106,16 @@
 .repo-description {
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
+  margin: 0.9rem 0 0;
+  min-height: 4.2rem;
+  line-height: 1.5;
 }
 
 .dark-card-mode {
   background-color: $darkBackground;
-  // box-shadow: $darkBoxShadow 0px 10px 30px -15px;
   color: $textColorDark;
   border: 2px solid $lightBorder1;
 }
