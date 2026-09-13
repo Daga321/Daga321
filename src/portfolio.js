@@ -47,59 +47,109 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I Do",
   subTitle:
-    "Full Stack Developer with experience in multiple technologies and a passion for learning.",
+    "Full Stack developer focused on backend, automation, deployment, and applied AI — with .NET and Python as my strongest foundations, supported by AI-assisted development workflows.",
   skills: [
     emoji(
-      "⚡ Backend development with Python (Django), Java (Spring Boot), and C# (.NET Core)"
-    ),
-    emoji("⚡ Game and simulation development with Unity and C#, or Phaser"),
-    emoji(
-      "⚡ Web development with Blazor, .NET Core, React, Vue, HTML, JavaScript, and CSS"
+      "⚡ Full-stack delivery with .NET, C#, Blazor, and pragmatic front-end work supported by AI-assisted development."
     ),
     emoji(
-      "⚡ Management and modeling of relational databases: SQL Server, MySQL, PostgreSQL"
+      "⚡ Cloud, DevOps and deployment automation with Git, GitHub, Docker, GitHub Actions, pipelines, and AWS."
     ),
     emoji(
-      "⚡ AI projects with Python, TensorFlow, Keras, scikit-learn, and NumPy"
+      "⚡ Applied AI and data work with Python, NumPy, TensorFlow, Keras, scikit-learn, LLM workflows, and AI-enabled product development."
     ),
-    emoji("⚡ Version control and project management with Git and GitHub"),
-    emoji("⚡ Automation and DevOps with CI/CD pipelines in GitHub Actions")
+    emoji(
+      "⚡ Project leadership, repository management, testing, and delivery coordination across teams and environments."
+    )
   ],
-
-  /* Make Sure to include correct Font Awesome Classname to view your icon
-https://fontawesome.com/icons?d=gallery */
-
-  softwareSkills: [
-    {skillName: "Python", fontAwesomeClassname: "devicon-python-plain"},
-    {skillName: "Django", fontAwesomeClassname: "devicon-django-plain"},
-    {skillName: "Java", fontAwesomeClassname: "devicon-java-plain"},
-    {skillName: "Spring Boot", fontAwesomeClassname: "devicon-spring-plain"},
-    {skillName: "C#", fontAwesomeClassname: "devicon-csharp-plain"},
-    {skillName: ".NET Core", fontAwesomeClassname: "devicon-dotnetcore-plain"},
-    {skillName: "Unity", fontAwesomeClassname: "devicon-unity-plain"},
-    {skillName: "Blazor", fontAwesomeClassname: "devicon-blazor-original"},
-    {skillName: "HTML5", fontAwesomeClassname: "devicon-html5-plain"},
-    {skillName: "CSS3", fontAwesomeClassname: "devicon-css3-plain"},
-    {skillName: "JavaScript", fontAwesomeClassname: "devicon-javascript-plain"},
+  skillGroups: [
     {
-      skillName: "SQL (Relational DBs)",
-      fontAwesomeClassname: "devicon-azuresqldatabase-plain"
+      title: "Full Stack",
+      description:
+        "Backend, APIs and software delivery with .NET and pragmatic front-end implementation.",
+      skills: [
+        {name: "C#", icon: "devicon-csharp-plain", lightColor: "#6a5cff", darkColor: "#9c8cff"},
+        {name: ".NET", icon: "devicon-dotnetcore-plain", lightColor: "#512bd4", darkColor: "#b99bff"},
+        {name: "Blazor", icon: "devicon-blazor-original", lightColor: "#6b7cff", darkColor: "#9bb2ff"},
+        {name: "ASP.NET", icon: "devicon-dotnetcore-plain", lightColor: "#3d7af0", darkColor: "#92bdff"},
+        {name: "Django", icon: "devicon-django-plain", lightColor: "#0f7b5c", darkColor: "#84e6ba"},
+        {name: "Python", icon: "devicon-python-plain", lightColor: "#3776ab", darkColor: "#8cc9ff"},
+        {name: "JavaScript", icon: "devicon-javascript-plain", lightColor: "#d6a72d", darkColor: "#ffe08d"},
+        {name: "TypeScript", icon: "devicon-typescript-plain", lightColor: "#007acc", darkColor: "#92d0ff"},
+        {name: "React", icon: "devicon-react-original", lightColor: "#61dafb", darkColor: "#9ee9ff"},
+        {name: "SQL", icon: "devicon-microsoftsqlserver-plain", lightColor: "#e64a19", darkColor: "#ff9a6b"},
+        {name: "Java", icon: "devicon-java-plain", lightColor: "#f89820", darkColor: "#ffd08a"},
+        {name: "springboot", icon: "devicon-spring-plain", lightColor: "#6db33f", darkColor: "#b8e986"}
+      ]
     },
     {
-      skillName: "TensorFlow",
-      fontAwesomeClassname: "devicon-tensorflow-original"
+      title: "Cloud & DevOps",
+      description:
+        "Git-driven delivery, pipelines, deployment automation and operational consistency across environments.",
+      skills: [
+        {name: "Git", icon: "devicon-git-plain", lightColor: "#f05032", darkColor: "#ff9b82"},
+        {name: "GitHub", icon: "devicon-github-original", lightColor: "#171515", darkColor: "#f0f6fc"},
+        {name: "Actions", icon: "devicon-githubactions-plain", lightColor: "#2088ff", darkColor: "#8ec5ff"},
+        {name: "Docker", icon: "devicon-docker-plain", lightColor: "#2496ed", darkColor: "#8ed2ff"},
+        {name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark", lightColor: "#ff9900", darkColor: "#ffd166"},
+        {name: "CI/CD", icon: "devicon-gitlab-plain", lightColor: "#e24329", darkColor: "#ff9c8a"},
+        {name: "Ubuntu server", icon: "devicon-ubuntu-plain", lightColor: "#e95420", darkColor: "#ffb28a"}
+      ]
     },
-    {skillName: "Keras", fontAwesomeClassname: "devicon-keras-plain"},
     {
-      skillName: "scikit-learn",
-      fontAwesomeClassname: "devicon-scikitlearn-plain"
+      title: "AI & Data",
+      description:
+        "Machine learning, applied experimentation and intelligent workflows that support product and technical decisions.",
+      skills: [
+        {name: "Python", icon: "devicon-python-plain", lightColor: "#3776ab", darkColor: "#8cc9ff"},
+        {name: "NumPy", icon: "devicon-numpy-plain", lightColor: "#4d77ff", darkColor: "#9eb8ff"},
+        {name: "TensorFlow", icon: "devicon-tensorflow-original", lightColor: "#ff6f00", darkColor: "#ffc166"},
+        {name: "Keras", icon: "devicon-keras-plain", lightColor: "#d00000", darkColor: "#ff8a80"},
+        {name: "scikit", icon: "devicon-scikitlearn-plain", lightColor: "#f39c12", darkColor: "#ffd166"},
+      ]
     },
-    {skillName: "NumPy", fontAwesomeClassname: "devicon-numpy-plain"},
-    {skillName: "Git", fontAwesomeClassname: "devicon-git-plain"},
-    {skillName: "GitHub", fontAwesomeClassname: "devicon-github-original"},
-    {skillName: "Docker", fontAwesomeClassname: "devicon-docker-plain"},
-    {skillName: "CI/CD", fontAwesomeClassname: "devicon-gitlab-plain"}
+    {
+      title: "Mobile & Interactive",
+      description:
+        "UI prototyping and app/game-oriented experiences where I can contribute with speed and technical flexibility.",
+      skills: [
+        {name: "Flutter", icon: "devicon-flutter-plain", lightColor: "#4cc2ff", darkColor: "#a7e3ff"},
+        {name: "Dart", icon: "devicon-dart-plain", lightColor: "#00c4ff", darkColor: "#8fe9ff"},
+        {name: "Unity", icon: "devicon-unity-plain", lightColor: "#111111", darkColor: "#f4f4f5"},
+        {name: "C#", icon: "devicon-csharp-plain", lightColor: "#6a5cff", darkColor: "#bbb3ff"},
+      ]
+    },
+    {
+      title: "Leadership & Delivery",
+      description:
+        "Repository structure, technical coordination, testing and project management across delivery teams.",
+      skills: [
+        {name: "GitFlow", icon: "devicon-git-plain", lightColor: "#f05032", darkColor: "#ff9b82"},
+        {name: "Reviews", icon: "devicon-github-original", lightColor: "#171515", darkColor: "#f0f6fc"},
+        {name: "Planning", icon: "devicon-trello-plain", lightColor: "#1c75d1", darkColor: "#9ad0ff"},
+        {name: "Testing", icon: "devicon-azuredevops-plain", lightColor: "#0078d4", darkColor: "#99d0ff"},
+        {name: "Docs", icon: "devicon-markdown-original", lightColor: "#2f2f2f", darkColor: "#e5e7eb"},
+      ]
+    },
+    {
+      title: "AI-Assisted Workflow",
+      description:
+        "Using modern AI coding tools to accelerate implementation, validation and product iteration.",
+      skills: [
+        {name: "Copilot", icon: "devicon-github-original", lightColor: "#6e5494", darkColor: "#d7c8ff"},
+        {name: "Cursor", icon: "devicon-vscode-plain", lightColor: "#2392f6", darkColor: "#9ad5ff"},
+        {name: "Kiro", icon: "devicon-vscode-plain", lightColor: "#2ea8ff", darkColor: "#9ae1ff"},
+        {name: "Codex", icon: "devicon-github-original", lightColor: "#5b5bd6", darkColor: "#cbc8ff"},
+        {name: "Agents", icon: "devicon-openai-plain", lightColor: "#10b981", darkColor: "#86efac"},
+        {name: "Automation", icon: "devicon-githubactions-plain", lightColor: "#2563eb", darkColor: "#bfdbfe"}
+      ]
+    }
   ],
+  /* 
+  Make Sure to include correct Font Awesome or devicon Classname to view your icon
+    https://fontawesome.com/icons?d=gallery
+    https://devicon.dev/
+ */
   display: true // Set false to hide this section, defaults to true
 };
 

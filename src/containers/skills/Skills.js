@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
 import "./Skills.scss";
-import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
@@ -12,6 +11,7 @@ export default function Skills() {
   if (!skillsSection.display) {
     return null;
   }
+
   return (
     <div className={isDark ? "dark-mode main" : "main"}>
       <div className="skills-main-div">
@@ -29,6 +29,7 @@ export default function Skills() {
             )}
           </div>
         </Fade>
+
         <Fade right duration={1000}>
           <div className="skills-text-div">
             <h1
@@ -50,9 +51,33 @@ export default function Skills() {
             >
               {skillsSection.subTitle}
             </p>
-            <SoftwareSkill />
+
+            <div className="skill-groups-grid">
+              {skillsSection.skillGroups.map((group, index) => (
+                <div key={index} className="skill-group">
+                  <h3>{group.title}</h3>
+                  <p>{group.description}</p>
+                  <div className="skill-icon-list">
+                    {group.skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="skill-icon-item"
+                        style={{
+                          "--skill-light-color": skill.lightColor || "#5b6ee1",
+                          "--skill-dark-color": skill.darkColor || "#9ad4ff"
+                        }}
+                      >
+                        <i className={skill.icon} />
+                        <span>{skill.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </Fade>
+
         <Fade bottom duration={1000}>
           <div className="skills-description-div">
             {skillsSection.skills.map((skills, i) => {

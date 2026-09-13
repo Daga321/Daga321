@@ -8,19 +8,23 @@ export default function SoftwareSkill() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const getSkillClass = (skills, index) => {
-    const baseClass = skills.fontAwesomeClassname.replace(" colored", "");
+    const baseClass = (skills.fontAwesomeClassname || skills.icon || "")
+      .replace(" colored", "");
     const isHovered = hoveredIndex === index;
 
-    // Skills that need white color in dark mode for better contrast
     const needsWhiteInDark =
       skills.skillName === "Unity" || skills.skillName === "GitHub";
 
     if (isHovered) {
-      if (isDark && needsWhiteInDark) {
-        return baseClass + " white-colored";
-      } else {
-        return baseClass + " colored";
+      if (skills.lightColor && skills.darkColor) {
+        return `${baseClass} custom-colored`;
       }
+
+      if (isDark && needsWhiteInDark) {
+        return `${baseClass} white-colored`;
+      }
+
+      return `${baseClass} colored`;
     }
 
     return baseClass;
@@ -30,7 +34,15 @@ export default function SoftwareSkill() {
     <div>
       <div className="software-skills-main-div">
         <ul className="dev-icons">
-          {skillsSection.softwareSkills.map((skills, i) => {
+          {(skillsSection.softwareSkills || []).map((skills, i) => {
+            const customColors =
+              skills.lightColor && skills.darkColor
+                ? {
+                    "--skill-light-color": skills.lightColor,
+                    "--skill-dark-color": skills.darkColor
+                  }
+                : undefined;
+
             return (
               <li
                 key={i}
@@ -38,6 +50,7 @@ export default function SoftwareSkill() {
                 name={skills.skillName}
                 onMouseEnter={() => setHoveredIndex(i)}
                 onMouseLeave={() => setHoveredIndex(null)}
+                style={customColors}
               >
                 <i className={getSkillClass(skills, i)}>
                   <p>{skills.skillName}</p>

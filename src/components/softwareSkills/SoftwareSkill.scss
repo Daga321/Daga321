@@ -52,9 +52,25 @@
   letter-spacing: 0.02em;
 }
 
-// .software-skill-inline > i:hover ~ p {
-//   color: $skillsColor;
-// }
+.software-skill-inline .custom-colored {
+  color: var(--skill-light-color, $subTitle);
+}
+
+.dark-mode .software-skill-inline .custom-colored {
+  color: var(--skill-dark-color, $textColorDark);
+}
+
+.software-skill-inline:hover .custom-colored,
+.software-skill-inline:focus-within .custom-colored {
+  color: var(--skill-light-color, $subTitle);
+  filter: saturate(1.2) brightness(1.08);
+}
+
+.dark-mode .software-skill-inline:hover .custom-colored,
+.dark-mode .software-skill-inline:focus-within .custom-colored {
+  color: var(--skill-dark-color, $textColorDark);
+  filter: saturate(1.2) brightness(1.08);
+}
 
 // White color for better contrast in dark mode (Unity, GitHub)
 .white-colored {
