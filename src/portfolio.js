@@ -33,7 +33,7 @@ const greeting = {
   username: "Daga",
   title: emoji("Hi all, I'm Daga"),
   subTitle: emoji(
-    "🇨🇴 I'm a Colombian Full Stack Developer 💻 and an active researcher 🔬 with the Infelcom research group at UPTC 🏫. I lead projects focused on artificial intelligence 🤖 and enjoy exploring innovative solutions in technology 🚀."
+    "🇨🇴 I'm a Full Stack Software Developer focused on backend development ⚙️, APIs, system architecture 🏗️, and DevOps 🚀. I enjoy solving problems 💡 and building scalable, maintainable solutions with both users and development teams in mind. I use AI 🤖 to enhance my workflow and productivity, while keeping engineering fundamentals at the core of what I build."
   ),
   resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
