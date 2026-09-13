@@ -2,11 +2,15 @@
 
 .skills-main-div {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   grid-template-rows: auto auto;
   gap: 30px;
   width: 100%;
   overflow: hidden;
+}
+
+.skills-main-div > * {
+  min-width: 0;
 }
 
 .skills-image-div {
@@ -48,6 +52,12 @@
 .skills-image-div > img {
   max-width: 100%;
   height: auto;
+}
+
+.skills-image-div,
+.skills-text-div,
+.skills-description-div {
+  min-width: 0;
 }
 
 .skills-heading {

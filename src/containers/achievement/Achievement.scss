@@ -11,6 +11,17 @@
   margin: 0px;
   margin-bottom: 50px;
 }
+
+.achievement-cards-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem 1rem;
+}
+
+.achievement-cards-div > * {
+  min-width: 0;
+}
+
 .subTitle {
   color: $subTitle;
 }

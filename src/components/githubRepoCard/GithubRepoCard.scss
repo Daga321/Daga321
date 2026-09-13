@@ -11,6 +11,7 @@
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  min-width: 0;
 }
 
 .repo-card-div:hover {

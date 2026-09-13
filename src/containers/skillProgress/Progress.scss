@@ -28,18 +28,21 @@
 }
 .skills-container {
   display: flex;
-  width: 90%;
-  padding: 20px 10px;
+  width: min(100%, 1200px);
+  padding: 20px 16px;
   margin: 0px auto;
   margin-top: 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
 }
 .skills-container > * {
   flex: 1;
+  min-width: 0;
   margin-bottom: 30px;
 }
 .skills-image > img {
-  margin-left: 80px;
-  max-width: 90%;
+  margin-left: 0;
+  max-width: 100%;
   height: auto;
 }
 

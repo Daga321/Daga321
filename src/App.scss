@@ -1,8 +1,24 @@
 @import "./globalColor";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  // uncomment this to debugg the layout of the page
+  // outline: 1px solid pink !important;
+}
+
 .App {
   text-align: center;
   width: 100%;
+  overflow-x: hidden;
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 

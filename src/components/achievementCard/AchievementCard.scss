@@ -3,7 +3,7 @@
 .card-image {
   max-width: 100%;
   height: auto;
-  width: 250px;
+  width: min(250px, 100%);
 }
 .card-title {
   color: $titleColor;
@@ -26,6 +26,7 @@
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  min-width: 0;
 }
 .certificate-detail-div {
   text-align: center;

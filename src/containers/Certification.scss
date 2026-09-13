@@ -1,11 +1,11 @@
 @import "../_globalColor";
 
 .certification-main-div {
-  width: calc(100% - 3rem);
+  width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
+  padding: 1rem 1.5rem 3rem;
+  box-sizing: border-box;
 }
 
 .certification-header {
@@ -34,7 +34,8 @@
 
 @media (max-width: 768px) {
   .certification-main-div {
-    width: calc(100% - 1.5rem);
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .certification-heading {
